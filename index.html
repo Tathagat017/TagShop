@@ -37,6 +37,7 @@
         font-family: "Oleo Script", Helvetica, sans-serif;
         line-height: 30px;
         font-size: larger;
+        font-variant: small-caps;
       }
 
       .copy-link {
@@ -46,6 +47,7 @@
         max-width: 250px;
         margin-left: 42%;
         margin-top: 1.5%;
+        margin-bottom: 0.5%;
       }
 
       .copy-link-input {
@@ -93,11 +95,12 @@
 
       #logoButton {
         border-radius: 20%;
+        background-color: #0a1922;
       }
       #logoButton img {
-        width: 100%;
+        width: 110%;
         height: 100%;
-        border-radius: 15%;
+        border-radius: 13%;
       }
 
       #N0 > button:nth-child(1) {
@@ -495,6 +498,65 @@
       #fifagif {
         margin-top: 3%;
       }
+
+      .glow {
+        font-size: 70px;
+        color: #ffffff;
+        text-align: center;
+        -webkit-animation: glow 1s ease-in-out infinite alternate;
+        -moz-animation: glow 1s ease-in-out infinite alternate;
+        animation: glow 1s ease-in-out infinite alternate;
+      }
+      @-webkit-keyframes glow {
+        from {
+          text-shadow: 0 0 10px #eeeeee, 0 0 20px #000000, 0 0 30px #000000,
+            0 0 40px #000000, 0 0 50px #9554b3, 0 0 60px #9554b3,
+            0 0 70px #9554b3;
+        }
+        to {
+          text-shadow: 0 0 20px #eeeeee, 0 0 30px #ff4da6, 0 0 40px #ff4da6,
+            0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6,
+            0 0 80px #ff4da6;
+        }
+      }
+
+      #next {
+        border: 1px black;
+        width: 5%;
+        height: 15%;
+        border-radius: 50%;
+        padding: 0%;
+        cursor: pointer;
+      }
+      #next > img {
+        width: 100%;
+        border-radius: 30%;
+        margin: 0%;
+        background-color: white;
+      }
+      #previous {
+        border: 1px black;
+        height: 15%;
+        width: 5%;
+        border-radius: 30%;
+        padding: 0%;
+        cursor: pointer;
+        background-color: whitesmoke;
+      }
+
+      #previous > img {
+        width: 100%;
+        border-radius: 50%;
+        margin: 0%;
+      }
+
+      #carousel {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: auto;
+        margin-top: 1%;
+      }
     </style>
   </head>
   <body>
@@ -510,11 +572,17 @@
         </button>
         <div id="navCoupon">
           <a href="https://www.shop.com/first_25_Off_Terms-v.xhtml"
-            ><h3>
+            ><h3 class="glow">
               1st time customers save 25% on TagShop exclusive brands! Please
               click here to learn more or click on below icon to copy.
             </h3>
           </a>
+
+          <script
+            type="text/javascript"
+            async
+            src="https://tenor.com/embed.js"
+          ></script>
           <div class="copy-link">
             <input
               type="text"
@@ -748,6 +816,18 @@
       </a>
     </div>
 
+    <!-- carousel fifa -->
+
+    <div id="carousel">
+      <button id="next">
+        <img src="./landing/caraousel/button/prev.png" alt="" />
+      </button>
+      <div id="carImage"></div>
+      <button id="previous">
+        <img src="./landing/caraousel/button/next.jpg" alt="" />
+      </button>
+    </div>
+
     <!-- popular brands2 -->
     <h2 id="popularHeading2">Branded Store : Clothing</h2>
     <div id="popular2">
@@ -793,6 +873,7 @@
     </div>
   </body>
   <script>
+    // copy coupon
     document.querySelectorAll(".copy-link").forEach((copyLinkParent) => {
       const inputField = copyLinkParent.querySelector(".copy-link-input");
       const copyButton = copyLinkParent.querySelector(".copy-link-button");
@@ -808,7 +889,7 @@
         setTimeout(() => (inputField.value = text), 2000);
       });
     });
-
+    // arrow to scroll up
     let arrow = document.getElementById("arrowbtn");
     window.addEventListener("scroll", scrollfunction);
     function scrollfunction() {
@@ -826,7 +907,7 @@
         top: 0,
       });
     });
-
+    //slideshow
     let imgArray = [
       "https://sslimages.shoppersstop.com/sys-master/root/h5e/h8b/28737097269278/Men-web_yuqeyeqyqevdvdjajahqy2727812.jpg",
       "https://sslimages.shoppersstop.com/sys-master/root/hb5/h13/28634271547422/casual-wear_Top-Banner-Web_VZXVAVGASUASJCVUASVCUASVCUSCSDD_36373684637648374.jpg",
@@ -854,5 +935,47 @@
         i = 0;
       }
     }, 5000);
+    //carousel
+    let picArray = [
+      "https://sslimages.shoppersstop.com/sys-master/root/h56/h39/28611329130526/FIFA-LP-Alth-Web_cnbcnvncbvb_989898.jpg",
+      "https://sslimages.shoppersstop.com/sys-master/root/h60/h81/28611320152094/FIFA-VH-Flex-Web---carousel-2022-11-10-new-hpda45.jpg",
+      "https://sslimages.shoppersstop.com/sys-master/root/hef/hc3/28677973508126/FIFA-Celio-Web_6644_hsssqqwyynhgg.jpg",
+      "https://sslimages.shoppersstop.com/sys-master/root/h2f/h2a/28718731526174/FIFA-Alt-Life-Web_474y3ggfhddhdhdj.jpg",
+      "https://sslimages.shoppersstop.com/sys-master/root/h82/h90/28771912581150/FIFA-Travel-Web_73000bdbjjsssiwwie.jpg",
+      "https://sslimages.shoppersstop.com/sys-master/root/hd0/hf6/28611334635550/FIFA-Adidas-Web_cbcbvhcvcvh_0900889.jpg",
+      "https://sslimages.shoppersstop.com/sys-master/root/hf2/h7d/28611319889950/FIFA-Puma-Web--carousel-2022-11-10-new-hpd.jpg",
+    ];
+    let next = document.getElementById("next");
+    let previous = document.getElementById("previous");
+    let pic = document.createElement("img");
+    let caraousel = document.getElementById("carImage");
+    pic.src = picArray[0];
+    pic.style.width = "100%";
+    pic.style.height = "100%";
+    caraousel.appendChild(pic);
+
+    let counter = 0;
+
+    next.addEventListener("click", function slideNext() {
+      counter++;
+      if (counter > picArray.length - 1) {
+        counter = 0;
+      }
+      pic.setAttribute("src", picArray[counter]);
+      pic.style.width = "100%";
+      pic.style.height = "100%";
+      caraousel.append(pic);
+    });
+
+    previous.addEventListener("click", function slideNext2() {
+      counter--;
+      if (counter < 0) {
+        counter = picArray.length - 1;
+      }
+      pic.setAttribute("src", picArray[counter]);
+      pic.style.width = "100%";
+      pic.style.height = "100%";
+      caraousel.append(pic);
+    });
   </script>
 </html>
