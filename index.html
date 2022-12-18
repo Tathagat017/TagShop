@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+
+      #N0 {
+        background-color: rgb(12, 10, 62);
+        border: 1px invisible red;
+        text-align: center;
+        width: 100%;
+        box-sizing: border-box;
+        padding-top: 0;
+        display: flex;
+        text-align: center;
+        justify-content: space-between;
+        background-image: linear-gradient(rgb(6, 5, 32), rgb(147, 20, 186));
+      }
+
+      #N0 a {
+        text-decoration: none;
+      }
+      #N0 a > h3 {
+        color: rgb(255, 255, 255);
+        font-style: italic;
+        font-family: "Oleo Script", Helvetica, sans-serif;
+        line-height: 30px;
+        font-size: larger;
+      }
+
+      .copy-link {
+        --height: 46px;
+
+        display: flex;
+        max-width: 250px;
+        margin-left: 42%;
+        margin-top: 1.5%;
+      }
+
+      .copy-link-input {
+        flex-grow: 1;
+        padding: 0 8px;
+        font-size: 14px;
+        border: 1px solid #cccccc;
+        border-right: none;
+        outline: none;
+        text-align: center;
+        font-weight: bold;
+        background-color: rgb(12, 10, 62);
+        color: rgb(255, 255, 255);
+      }
+
+      .copy-link-input:hover {
+        background: rgb(255, 255, 255);
+        color: black;
+      }
+
+      .copy-link-button {
+        flex-shrink: 0;
+        width: var(--height);
+        height: var(--height);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #dddddd;
+        color: #333333;
+        outline: none;
+        border: 1px solid #cccccc;
+        cursor: pointer;
+      }
+
+      .copy-link-button:hover {
+        background: #7d7c7c;
+      }
+
+      #logo {
+        width: 100%;
+        height: 100%;
+        margin: 0px;
+        border-radius: 15%;
+      }
+
+      #logoButton {
+        border-radius: 20%;
+      }
+      #logoButton img {
+        width: 100%;
+        height: 100%;
+        border-radius: 15%;
+      }
+
+      #N0 > button:nth-child(1) {
+        width: 5%;
+        border: 1px solid rgb(12, 10, 62);
+        cursor: pointer;
+      }
+
+      #hamburger > button {
+        height: 65px;
+        width: 65px;
+        cursor: pointer;
+        margin-left: 0px;
+        transition: transform 0.2s;
+      }
+
+      #hamburger > button:hover {
+        transform: scale(1.2);
+      }
+
+      #navContainer {
+        width: 100%;
+        border: 1px solid rgb(12, 10, 62);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: 0px;
+        padding: 0.4%;
+        box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+        padding-left: 0px;
+        box-sizing: border-box;
+        background-color: white;
+      }
+
+      #N12-bars {
+        height: 60px;
+        width: 500px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: rgb(12, 10, 62);
+        border: 2px solid rgb(12, 10, 62);
+        cursor: pointer;
+        border-radius: 28px;
+        transition: none;
+        overflow: none;
+        padding: 0px;
+      }
+
+      #N12-bars input {
+        height: 60px;
+        width: 250px;
+        border: hidden;
+        border-left: 1px solid rgb(12, 10, 62);
+        overflow: hidden;
+        margin: 0px;
+        font-size: larger;
+      }
+      #N12-bars select {
+        height: 60px;
+        width: 180px;
+        border-radius: 20px;
+        border: hidden;
+        margin: 0px;
+        text-align: center;
+        font-weight: bold;
+        border-radius: 25px;
+        border-top-right-radius: 0px 0px;
+        border-bottom-right-radius: 0px 0px;
+      }
+
+      #N12-bars button {
+        height: 62px;
+        width: 65px;
+        cursor: pointer;
+        border-radius: 25px;
+        border: hidden;
+        background-color: rgb(12, 10, 62);
+        color: white;
+        border-top-left-radius: 0px 0px;
+        border-bottom-left-radius: 0px 0px;
+        margin: 0px;
+      }
+      .material-icons {
+        margin: 0px;
+      }
+
+      .icons {
+        width: 60px;
+        border: hidden;
+        background-color: white;
+        cursor: pointer;
+        transition: transform 0.2s;
+      }
+      .icons:hover {
+        transform: scale(1.19);
+      }
+      .iconImg {
+        width: 100%;
+        height: 100%;
+      }
+
+      .choose {
+        text-decoration: blueviolet;
+      }
+      .choose:hover {
+        color: rgb(9, 42, 58);
+        background-color: #eeeded;
+        font-size: larger;
+      }
+
+      #search {
+        text-align: center;
+      }
+
+      .option {
+        text-align: justify;
+        font-size: large;
+      }
+
+      #search-btn {
+        transition: transform 0.2s;
+      }
+
+      #search-btn:hover {
+        transform: scale(1.15);
+      }
+
+      body {
+        scroll-behavior: smooth;
+      }
+      #arrowbtn {
+        position: absolute;
+        top: 80%;
+        left: 95%;
+        position: fixed;
+        display: none;
+        background-color: #0a1922;
+        border-radius: 50%;
+        outline: 4px solid black;
+      }
+
+      #consultant {
+        margin-top: 20px;
+        width: 100%;
+        height: 80px;
+        display: flex;
+        background-color: rgb(210, 189, 230);
+        justify-content: space-between;
+        align-items: center;
+        box-sizing: border-box;
+        background-image: url("./background/1.jpg");
+        background-size: 35% 100px;
+        box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px,
+          rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+          rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+      }
+
+      #consultant > div {
+        display: flex;
+        width: 35%;
+        height: 80px;
+        align-items: center;
+        margin-left: 0px;
+      }
+
+      #consultant > div h4 {
+        font-size: larger;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        color: rgb(0, 0, 0);
+      }
+      #consultant > div:nth-child(1) {
+        background-image: url("./background/2.jpg");
+        background-size: 100% 100px;
+        align-self: flex-start;
+      }
+      #consultant > div:nth-child(2) {
+        background-image: url("./background/4.png");
+        background-size: 100% 100px;
+        width: 35%;
+        height: 80px;
+        align-items: center;
+        justify-content: flex-end;
+      }
+      #consultant > div > h4 > img {
+        width: 30px;
+        height: 30px;
+        margin-left: 0px;
+        margin-right: 0px;
+        border-radius: 50%;
+      }
+
+      #banner {
+        border: 1px solid hidden;
+        width: 100%;
+        height: 30%;
+        cursor: pointer;
+        margin-top: 2%;
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
+      }
+
+      .banners {
+        margin-top: 20px;
+        border: 1px hidden;
+        width: 100%;
+        height: 30%;
+        cursor: pointer;
+        margin-bottom: 2%;
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
+      }
+      .banners > img {
+        width: 100%;
+      }
+
+      #banner2 {
+        border: 1px hidden black;
+        display: flex;
+        width: 100%;
+        height: 10%;
+        margin-top: 2%;
+        justify-content: space-between;
+        box-sizing: content-box;
+      }
+
+      .cardb2 {
+        border: 1px hidden black;
+        width: 22%;
+        height: 95%;
+        text-align: center;
+        padding-bottom: 1%;
+        box-sizing: border-box;
+        color: rgb(72, 14, 126);
+        box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px,
+          rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px,
+          rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px,
+          rgba(0, 0, 0, 0.07) 0px 32px 64px;
+      }
+      .cardb2 > a {
+        display: block;
+      }
+
+      .cardb2 > img {
+        width: 90%;
+        height: 60%;
+      }
+      .cardb2-1 > img {
+        width: 90%;
+
+        margin: auto;
+        display: block;
+        margin-top: 1.3%;
+      }
+
+      .cardb2-1 {
+        border: 1px hidden black;
+        text-align: center;
+        width: 22%;
+        height: 95%;
+        color: rgb(72, 14, 126);
+        padding-bottom: 1%;
+        box-sizing: border-box;
+        box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px,
+          rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px,
+          rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px,
+          rgba(0, 0, 0, 0.07) 0px 32px 64px;
+      }
+
+      #extraSign {
+        border: 1px solid rgb(255, 255, 255);
+        text-align: center;
+        padding: 1%;
+        color: rgb(72, 14, 126);
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      #extraSign h4 {
+        margin-bottom: 1.5%;
+        word-spacing: 1.5%;
+      }
+      #extraSignIn {
+        background-color: rgb(12, 10, 62);
+        width: 70%;
+        height: 30%;
+        border: 1px solid rgb(12, 10, 62);
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        color: whitesmoke;
+        text-align: center;
+        box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+          rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+        background-image: linear-gradient(rgb(6, 5, 32), rgb(147, 20, 186));
+        padding: 1%;
+        cursor: pointer;
+      }
+      #extraSignIn > img {
+        display: block;
+        margin: auto;
+      }
+
+      nav {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+      }
+
+      #popular1 {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+      }
+
+      .brandcards {
+        width: 15%;
+        border: 1px hidden solid;
+        text-align: center;
+        background-color: aliceblue;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em,
+          rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em,
+          rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+        cursor: pointer;
+      }
+
+      .brandcards > img {
+        border-radius: 50%;
+      }
+
+      #popularHeading1 {
+        margin: 2%;
+        font-variant: small-caps;
+        text-align: center;
+        color: rgb(72, 14, 126);
+      }
+
+      #popular2 {
+        display: flex;
+        width: 100%;
+        justify-content: space-evenly;
+      }
+
+      #popular2 img {
+        width: 80%;
+      }
+
+      #popularHeading2 {
+        margin: 2%;
+        font-variant: small-caps;
+        text-align: center;
+        color: rgb(72, 14, 126);
+      }
+
+      .cashback-logo {
+        width: 30px;
+        height: 30px;
+        margin-left: 0px;
+        margin-right: 0px;
+        border-radius: 50%;
+      }
+
+      #banner4 {
+        width: 90%;
+        display: flex;
+        margin: 3%;
+        border: 1px hidden beige;
+        box-sizing: border-box;
+        justify-content: space-between;
+        margin: auto;
+        margin-top: 3%;
+      }
+
+      .banner4C > h3 {
+        display: inline;
+      }
+
+      .banner4C > img:nth-child(1) {
+        display: block;
+        width: 100%;
+      }
+
+      .banner4C {
+        width: 22%;
+        border: 1px solid hidden;
+        box-sizing: border-box;
+        text-align: center;
+        box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px,
+          rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+        cursor: pointer;
+      }
+
+      #popular2 > div img {
+        cursor: pointer;
+      }
+
+      #fifagif {
+        margin-top: 3%;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div id="N0">
+        <button type="button" id="logoButton">
+          <a href="./index.html"
+            ><img
+              src="./logo/tagshop-high-resolution-color-logo.png"
+              alt=""
+              id="logo"
+          /></a>
+        </button>
+        <div id="navCoupon">
+          <a href="https://www.shop.com/first_25_Off_Terms-v.xhtml"
+            ><h3>
+              1st time customers save 25% on TagShop exclusive brands! Please
+              click here to learn more or click on below icon to copy.
+            </h3>
+          </a>
+          <div class="copy-link">
+            <input
+              type="text"
+              class="copy-link-input"
+              value="FIRSTOFF25"
+              readonly
+            />
+            <button type="button" class="copy-link-button">
+              <span class="material-icons">content_copy</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- all nav container here -->
+      <div id="navContainer">
+        <div id="hamburger">
+          <button type="button" id="hamburger">
+            <span class="material-icons"> menu </span>
+          </button>
+        </div>
+
+        <div id="N12-bars">
+          <select name="category" id="category">
+            <option value="" class="option">All departments</option>
+            <option value="" class="option">Books</option>
+            <option value="" class="option">Clothes</option>
+            <option value="" class="option">Electronics</option>
+            <option value="" class="option">Gardening</option>
+            <option value="" class="option">Gift</option>
+            <option value="" class="option">Health and Nutrition</option>
+            <option value="" class="option">Jewelry</option>
+            <option value="" class="option">Shoes</option>
+          </select>
+          <input
+            type="text"
+            id="search"
+            value=""
+            placeholder="search the entire shop"
+          />
+          <button type="button" id="search-btn">
+            <span class="material-icons"> search </span>
+          </button>
+        </div>
+
+        <a class="choose" href="">Electronics</a>
+        <a class="choose" href="">Beauty</a>
+        <a class="choose" href="">Exclusive Brands</a>
+        <a class="choose" href="">Deals</a>
+        <a class="choose" href="">Shop Local</a>
+
+        <button class="icons">
+          <img class="iconImg" src="./icons/login.png" alt="" />
+        </button>
+
+        <button class="icons">
+          <img class="iconImg" src="./icons/reloading.png" alt="" />
+        </button>
+        <button class="icons">
+          <img class="iconImg" src="./icons/trolley.png" alt="" />
+        </button>
+      </div>
+    </nav>
+    <!-- consultant -->
+    <div id="consultant">
+      <div>
+        <h4>Your Shop Consultant is tagSop.com</h4>
+      </div>
+      <div>
+        <h4>
+          Earn upto 50%
+          <img
+            src="logo\tagshop-high-resolution-color-logo.png"
+            alt=""
+          />Cashhback on eligible purchases
+        </h4>
+      </div>
+    </div>
+
+    <!-- static banner -->
+    <div class="banners">
+      <img
+        src="https://img.shop.com/Image/homepage/shop-gbr-102789-holiday-hot-toys-banners-1600x300-img-min1669996056936.jpg"
+        alt=""
+      />
+    </div>
+    <!-- banner -->
+
+    <div id="banner"></div>
+
+    <!-- banner2 -->
+    <div id="banner2">
+      <div class="cardb2">
+        <h3>Recently Viewed</h3>
+        <img
+          src="https://img.shop.com/Image/250000/259800/259815/products/1302874130.jpg?plain&size=300x300"
+          alt=""
+        />
+        <a href="">Show more</a>
+      </div>
+      <div class="cardb2">
+        <h3>Your Favorite Departments</h3>
+        <img
+          src="https://img.shop.com/Image/departments/Health%20&%20Nutrition.jpg"
+          alt=""
+        />
+        <a href="">Health and Nutrition</a>
+      </div>
+      <div class="cardb2-1">
+        <h3>Featured One Cart Stores</h3>
+        <img
+          src="https://img.shop.com/Image/topbrands/nmlogos_136706.gif"
+          alt=""
+        />
+        <img
+          src="https://img.shop.com/Image/topbrands/nmlogos_134047.gif"
+          alt=""
+        />
+        <img
+          src="https://img.shop.com/Image/topbrands/nmlogos_108567.gif"
+          alt=""
+        />
+        <img
+          src="https://img.shop.com/Image/topbrands/nmlogos_113138.gif"
+          alt=""
+        />
+        <a href="">See More Stores</a>
+      </div>
+      <div class="cardb2">
+        <div id="extraSign">
+          <h4>For better experience</h4>
+          <button id="extraSignIn">
+            Sign up/Login
+            <img src="./icons/user-login-security-11951.png" alt="" />
+          </button>
+        </div>
+        <img
+          src="https://img.shop.com/Image/homepage/stocking-stuffers-media-300x250-img1669837197571.jpg"
+          alt=""
+        />
+      </div>
+    </div>
+
+    <!-- popular brands 1 -->
+    <h2 id="popularHeading1">Branded Store : Sneakers</h2>
+    <div id="popular1">
+      <div class="brandcards">
+        <img src="./landing/brands1/adidaslogo_140_1100.jpg" alt="" />
+      </div>
+      <div class="brandcards">
+        <img src="./landing/brands1/coach_brand7.jpg" alt="" />
+      </div>
+      <div class="brandcards">
+        <img src="./landing/brands1/cuisinart.gif" alt="" />
+      </div>
+      <div class="brandcards">
+        <img src="./landing/brands1/michaelkors_140x110-img.gif" alt="" />
+      </div>
+      <div class="brandcards">
+        <img src="./landing/brands1/nike_140x110-img.gif" alt="" />
+      </div>
+    </div>
+
+    <!-- Banner - four cards -->
+    <div id="banner4">
+      <div class="banner4C">
+        <img
+          src="./landing/banner4/us-eng-jcpenney-50p-hp-nov221669752610403.jpeg"
+          alt=""
+        />
+        <h3>2.00 %</h3>
+        <img
+          class="cashback-logo"
+          src="./logo/tagshop-high-resolution-color-logo.png"
+          alt=""
+        />
+        <h3>Cashback</h3>
+        <p>JC Penney Up to 50% Off</p>
+      </div>
+      <div class="banner4C">
+        <img
+          src="./landing/banner4/us-eng-macys-hp-media-dec221670950239639.jpeg"
+          alt=""
+        />
+        <h3>2.00 %</h3>
+        <img
+          class="cashback-logo"
+          src="./logo/tagshop-high-resolution-color-logo.png"
+          alt=""
+        />
+        <h3>Cashback</h3>
+        <p>Up to 50% off Last Minute Gifting</p>
+      </div>
+      <div class="banner4C">
+        <img
+          src="./landing/banner4/us-eng-nike-hp-dec221670866755445.jpeg"
+          alt=""
+        />
+        <h3>2.00 %</h3>
+        <img
+          class="cashback-logo"
+          src="./logo/tagshop-high-resolution-color-logo.png"
+          alt=""
+        />
+        <h3>Cashback</h3>
+        <p>Up to 50% off Last Minute Gifting</p>
+      </div>
+      <div class="banner4C">
+        <img
+          src="./landing/banner4/us-eng-oldnavy-ny-media-fillin-jan221671030969812.jpg"
+          alt=""
+        />
+        <h3>2.00 %</h3>
+        <img
+          class="cashback-logo"
+          src="./logo/tagshop-high-resolution-color-logo.png"
+          alt=""
+        />
+        <h3>Cashback</h3>
+        <p>40% Off Your Purchase!.</p>
+      </div>
+    </div>
+
+    <!-- Fifa Worldcup -->
+    <div id="fifagif">
+      <a href="“somesite.html”">
+        <img
+          src="./landing/banner5/web-FIFA-Strip-Web-15112022.gif"
+          height="300px"
+          width="100%"
+        />
+      </a>
+    </div>
+
+    <!-- popular brands2 -->
+    <h2 id="popularHeading2">Branded Store : Clothing</h2>
+    <div id="popular2">
+      <div>
+        <img
+          src="./landing/brands2/allen-solly_6-Widgets_sbxchgscjscjfsjc_8676757576.webp"
+          alt=""
+        />
+      </div>
+      <div>
+        <img
+          src="./landing/brands2/celio_6-Widgets_6744fhhaabnx_88211.webp"
+          alt=""
+        />
+      </div>
+      <div>
+        <img src="./landing/brands2/nautica_6-Widgets.webp" alt="" />
+      </div>
+      <div>
+        <img
+          src="./landing/brands2/pepe-jeans_6-Widgets_nbwwvbaaaa_89897yhjjww.webp"
+          alt=""
+        />
+      </div>
+      <div>
+        <img
+          src="./landing/brands2/van-heusen_6-Widgets_6663333_yuhjhjabnqqqmnjss.webp"
+          alt=""
+        />
+      </div>
+      <div>
+        <img src="./landing/brands2/tyhj.webp" alt="" />
+      </div>
+    </div>
+
+    <!-- arrow -->
+    <div id="arrowbtn">
+      <img
+        style="width: 50px; height: 50px; border-radius: 50%"
+        src="./icons/backtotop.webp"
+        alt=""
+      />
+    </div>
+  </body>
+  <script>
+    document.querySelectorAll(".copy-link").forEach((copyLinkParent) => {
+      const inputField = copyLinkParent.querySelector(".copy-link-input");
+      const copyButton = copyLinkParent.querySelector(".copy-link-button");
+      const text = inputField.value;
+
+      inputField.addEventListener("focus", () => inputField.select());
+
+      copyButton.addEventListener("click", () => {
+        inputField.select();
+        navigator.clipboard.writeText(text);
+
+        inputField.value = "Copied!";
+        setTimeout(() => (inputField.value = text), 2000);
+      });
+    });
+
+    let arrow = document.getElementById("arrowbtn");
+    window.addEventListener("scroll", scrollfunction);
+    function scrollfunction() {
+      if (
+        document.body.scroll > 100 ||
+        document.documentElement.scrollTop > 100
+      ) {
+        arrow.style.display = "block";
+      } else {
+        arrow.style.display = "none";
+      }
+    }
+    arrow.addEventListener("click", () => {
+      window.scrollTo({
+        top: 0,
+      });
+    });
+
+    let imgArray = [
+      "https://sslimages.shoppersstop.com/sys-master/root/h5e/h8b/28737097269278/Men-web_yuqeyeqyqevdvdjajahqy2727812.jpg",
+      "https://sslimages.shoppersstop.com/sys-master/root/hb5/h13/28634271547422/casual-wear_Top-Banner-Web_VZXVAVGASUASJCVUASVCUASVCUSCSDD_36373684637648374.jpg",
+      "https://sslimages.shoppersstop.com/sys-master/root/h23/h61/28554714775582/sports-wear_Top-Banner-Webfgh.jpg",
+      "https://sslimages.shoppersstop.com/sys-master/root/hbb/h77/28704737656862/Top-Banner-van-heausen-Web-1840x500_663333_dbhdbbbdsddqrwwww.jpg",
+      "https://sslimages.shoppersstop.com/sys-master/root/h56/h39/28611329130526/FIFA-LP-Alth-Web_cnbcnvncbvb_989898.jpg",
+      "https://sslimages.shoppersstop.com/sys-master/root/h82/h90/28771912581150/FIFA-Travel-Web_73000bdbjjsssiwwie.jpg",
+    ];
+
+    let image = document.createElement("img");
+    let cont = document.getElementById("banner");
+    image.src = imgArray[1];
+    image.style.width = "100%";
+    image.style.height = "100%";
+    cont.appendChild(image);
+
+    let i = 0;
+    setInterval(() => {
+      image.setAttribute("src", imgArray[i]);
+      image.style.width = "100%";
+      image.style.height = "100%";
+      cont.append(image);
+      i++;
+      if (i > imgArray.length - 1) {
+        i = 0;
+      }
+    }, 5000);
+  </script>
+</html>
