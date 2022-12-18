@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+      #N0 {
+        background-color: rgb(12, 10, 62);
+        border: 1px invisible red;
+        text-align: center;
+        width: 100%;
+        box-sizing: border-box;
+        padding-top: 0;
+        display: flex;
+        text-align: center;
+        justify-content: space-between;
+      }
+
+      #N0 a {
+        text-decoration: none;
+      }
+      #N0 a > h3 {
+        color: rgb(255, 255, 255);
+        font-style: italic;
+        font-family: cursive;
+        line-height: 30px;
+        font-size: larger;
+      }
+
+      .copy-link {
+        --height: 46px;
+
+        display: flex;
+        max-width: 250px;
+        margin-left: 42%;
+        margin-top: 1.5%;
+      }
+
+      .copy-link-input {
+        flex-grow: 1;
+        padding: 0 8px;
+        font-size: 14px;
+        border: 1px solid #cccccc;
+        border-right: none;
+        outline: none;
+        text-align: center;
+        font-weight: bold;
+        background-color: rgb(12, 10, 62);
+        color: rgb(255, 255, 255);
+      }
+
+      .copy-link-input:hover {
+        background: rgb(255, 255, 255);
+        color: black;
+      }
+
+      .copy-link-button {
+        flex-shrink: 0;
+        width: var(--height);
+        height: var(--height);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #dddddd;
+        color: #333333;
+        outline: none;
+        border: 1px solid #cccccc;
+        cursor: pointer;
+      }
+
+      .copy-link-button:hover {
+        background: #7d7c7c;
+      }
+
+      #logo {
+        width: 100%;
+        height: 100%;
+        margin: 0px;
+      }
+
+      #N0 > button:nth-child(1) {
+        width: 5%;
+        border: 1px solid rgb(12, 10, 62);
+        cursor: pointer;
+      }
+
+      #hamburger > button {
+        height: 65px;
+        width: 65px;
+        cursor: pointer;
+        margin-left: 0px;
+        transition: transform 0.2s;
+      }
+
+      #hamburger > button:hover {
+        transform: scale(1.2);
+      }
+
+      #navContainer {
+        width: 100%;
+        border: 1px solid rgb(12, 10, 62);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: 0px;
+        padding: 0.4%;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+          rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+          rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        padding-left: 0px;
+      }
+
+      #N12-bars {
+        height: 60px;
+        width: 500px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: rgb(12, 10, 62);
+        border: 2px solid rgb(12, 10, 62);
+        cursor: pointer;
+        border-radius: 28px;
+        transition: none;
+        overflow: none;
+        padding: 0px;
+      }
+
+      #N12-bars input {
+        height: 60px;
+        width: 250px;
+        border: hidden;
+        border-left: 1px solid rgb(12, 10, 62);
+        overflow: hidden;
+        margin: 0px;
+        font-size: larger;
+      }
+      #N12-bars select {
+        height: 60px;
+        width: 180px;
+        border-radius: 20px;
+        border: hidden;
+        margin: 0px;
+        text-align: center;
+        font-weight: bold;
+        border-radius: 25px;
+        border-top-right-radius: 0px 0px;
+        border-bottom-right-radius: 0px 0px;
+      }
+
+      #N12-bars button {
+        height: 62px;
+        width: 65px;
+        cursor: pointer;
+        border-radius: 25px;
+        border: hidden;
+        background-color: rgb(12, 10, 62);
+        color: white;
+        border-top-left-radius: 0px 0px;
+        border-bottom-left-radius: 0px 0px;
+        margin: 0px;
+      }
+      .material-icons {
+        margin: 0px;
+      }
+
+      .icons {
+        width: 60px;
+        border: hidden;
+        background-color: white;
+        cursor: pointer;
+        transition: transform 0.2s;
+      }
+      .icons:hover {
+        transform: scale(1.19);
+      }
+      .iconImg {
+        width: 100%;
+        height: 100%;
+      }
+
+      .choose {
+        text-decoration: blueviolet;
+      }
+      .choose:hover {
+        color: rgb(9, 42, 58);
+        background-color: #eeeded;
+        font-size: larger;
+      }
+
+      #search {
+        text-align: center;
+      }
+
+      .option {
+        text-align: justify;
+        font-size: large;
+      }
+
+      #search-btn {
+        transition: transform 0.2s;
+      }
+
+      #search-btn:hover {
+        transform: scale(1.15);
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div id="N0">
+        <button type="button">
+          <a href="./index.html"
+            ><img
+              src="./logo/tagshop-high-resolution-color-logo.png"
+              alt=""
+              id="logo"
+          /></a>
+        </button>
+        <div id="navCoupon">
+          <a href="https://www.shop.com/first_25_Off_Terms-v.xhtml"
+            ><h3>
+              1st time customers save 25% on TagShop exclusive brands! Please
+              click here to learn more or click on below icon to copy.
+            </h3>
+          </a>
+          <div class="copy-link">
+            <input
+              type="text"
+              class="copy-link-input"
+              value="FIRSTOFF25"
+              readonly
+            />
+            <button type="button" class="copy-link-button">
+              <span class="material-icons">content_copy</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- all nav container here -->
+      <div id="navContainer">
+        <div id="hamburger">
+          <button type="button" id="hamburger">
+            <span class="material-icons"> menu </span>
+          </button>
+        </div>
+
+        <div id="N12-bars">
+          <select name="category" id="category">
+            <option value="" class="option">All departments</option>
+            <option value="" class="option">Books</option>
+            <option value="" class="option">Clothes</option>
+            <option value="" class="option">Electronics</option>
+            <option value="" class="option">Gardening</option>
+            <option value="" class="option">Gift</option>
+            <option value="" class="option">Health and Nutrition</option>
+            <option value="" class="option">Jewelry</option>
+            <option value="" class="option">Shoes</option>
+          </select>
+          <input
+            type="text"
+            id="search"
+            value=""
+            placeholder="search the entire shop"
+          />
+          <button type="button" id="search-btn">
+            <span class="material-icons"> search </span>
+          </button>
+        </div>
+
+        <a class="choose" href="">Electronics</a>
+        <a class="choose" href="">Beauty</a>
+        <a class="choose" href="">Exclusive Brands</a>
+        <a class="choose" href="">Deals</a>
+        <a class="choose" href="">Shop Local</a>
+
+        <button class="icons">
+          <img class="iconImg" src="./icons/login.png" alt="" />
+        </button>
+
+        <button class="icons">
+          <img class="iconImg" src="./icons/reloading.png" alt="" />
+        </button>
+        <button class="icons">
+          <img class="iconImg" src="./icons/trolley.png" alt="" />
+        </button>
+      </div>
+    </nav>
+  </body>
+  <script>
+    document.querySelectorAll(".copy-link").forEach((copyLinkParent) => {
+      const inputField = copyLinkParent.querySelector(".copy-link-input");
+      const copyButton = copyLinkParent.querySelector(".copy-link-button");
+      const text = inputField.value;
+
+      inputField.addEventListener("focus", () => inputField.select());
+
+      copyButton.addEventListener("click", () => {
+        inputField.select();
+        navigator.clipboard.writeText(text);
+
+        inputField.value = "Copied!";
+        setTimeout(() => (inputField.value = text), 2000);
+      });
+    });
+  </script>
+</html>
