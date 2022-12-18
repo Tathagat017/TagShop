@@ -4,12 +4,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>TagShop Home</title>
     <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
     <style>
+      @import url("https://fonts.googleapis.com/css2?family=PT+Sans:ital@1&display=swap");
       * {
         margin: 0px;
         padding: 0px;
@@ -64,7 +65,7 @@
       }
 
       .copy-link-input:hover {
-        background: rgb(255, 255, 255);
+        background: rgb(232, 195, 227);
         color: black;
       }
 
@@ -83,7 +84,7 @@
       }
 
       .copy-link-button:hover {
-        background: #7d7c7c;
+        background: #757575;
       }
 
       #logo {
@@ -109,16 +110,121 @@
         cursor: pointer;
       }
 
-      #hamburger > button {
+      /* #hamburger > button {
         height: 65px;
         width: 65px;
         cursor: pointer;
         margin-left: 0px;
+        font-family: "PT Sans", sans-serif;
         transition: transform 0.2s;
+      } */
+
+      /* #hamburger > button:hover {
+        transform: scale(1.2);
+      } */
+
+      /* #hamburger a :hover {
+        color: tomato;
+      } */
+
+      #hamburger {
+        margin-left: 10px;
+        margin-bottom: 10px;
+        margin-top: 2%;
+        padding: 0px;
+        cursor: pointer;
+        font-family: "PT Sans", sans-serif;
       }
 
-      #hamburger > button:hover {
-        transform: scale(1.2);
+      #menu {
+        width: 35px;
+        height: 30px;
+        margin: 15%;
+        cursor: pointer;
+        z-index: 100;
+        margin: auto;
+      }
+
+      .bar {
+        height: 5px;
+        width: 100%;
+        background-color: rgb(12, 10, 62);
+        display: block;
+        border-radius: 5px;
+        transition: 0.3s ease;
+      }
+
+      #bar1 {
+        transform: translateY(-4px);
+      }
+
+      #bar3 {
+        transform: translateY(4px);
+      }
+
+      .nav {
+        width: 100px;
+        height: 100px;
+        margin: auto;
+        padding: 5%;
+        transition: 1s ease;
+        display: none;
+        cursor: pointer;
+      }
+
+      .nav li a {
+        color: black;
+        text-decoration: none;
+      }
+
+      #nav li > a :hover {
+        border: 1px brown hidden;
+        text-decoration: tomato;
+      }
+
+      .nav li {
+        list-style: none;
+        padding: 16px 0px;
+      }
+
+      .icon.bar {
+        background-color: #000000;
+      }
+
+      .icon #bar1 {
+        transform: translateY(4px) rotate(-45deg);
+      }
+
+      .icon #bar3 {
+        transform: translateY(-6px) rotate(45deg);
+      }
+      .icon #bar2 {
+        opacity: 0;
+      }
+
+      .change {
+        background-color: rgb(225, 180, 238);
+        height: 100vh;
+        margin: 0px;
+        font-size: 30px;
+        position: absolute;
+        top: 0;
+        z-index: -100;
+        width: 20%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: transform 0.2s;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+          rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+          rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+      }
+
+      .change :hover {
+        color: tomato;
+        text-decoration: tomato;
+        transform: scale(1.1);
       }
 
       #navContainer {
@@ -500,7 +606,7 @@
       }
 
       .glow {
-        font-size: 70px;
+        font-size: 20px;
         color: #ffffff;
         text-align: center;
         -webkit-animation: glow 1s ease-in-out infinite alternate;
@@ -573,8 +679,11 @@
         <div id="navCoupon">
           <a href="https://www.shop.com/first_25_Off_Terms-v.xhtml"
             ><h3 class="glow">
-              1st time customers save 25% on TagShop exclusive brands! Please
-              click here to learn more or click on below icon to copy.
+              <marquee width="96%" direction="right" height="30px">
+                1st time customers save 25% on TagShop exclusive brands! Please
+                click here to learn more or click on below icon to
+                copy.</marquee
+              >
             </h3>
           </a>
 
@@ -586,7 +695,7 @@
           <div class="copy-link">
             <input
               type="text"
-              class="copy-link-input"
+              class="copy-link-input glow"
               value="FIRSTOFF25"
               readonly
             />
@@ -599,9 +708,25 @@
       <!-- all nav container here -->
       <div id="navContainer">
         <div id="hamburger">
-          <button type="button" id="hamburger">
-            <span class="material-icons"> menu </span>
-          </button>
+          <!-- <button type="button" id="hamburger">
+            <span class="material-icons" onclick="onClickMenu()"> menu </span>
+          </button> -->
+          <div id="menu">
+            <div id="bar1" class="bar"></div>
+            <div id="bar2" class="bar"></div>
+            <div id="bar3" class="bar"></div>
+            <ul id="nav" class="nav">
+              <li>
+                <a href="" class="navOption"><p>Shoes</p></a>
+              </li>
+              <li><a href="" class="navOption">Clothing</a></li>
+              <li><a href="" class="navOption">Electronics</a></li>
+              <li><a href="" class="navOption">Beauty</a></li>
+              <li><a href="" class="navOption">Health and Nutrition</a></li>
+              <li><a href="" class="navOption">Jewelry</a></li>
+              <li><a href="" class="navOption">Home</a></li>
+            </ul>
+          </div>
         </div>
 
         <div id="N12-bars">
@@ -976,6 +1101,14 @@
       pic.style.width = "100%";
       pic.style.height = "100%";
       caraousel.append(pic);
+    });
+
+    // Menu Hamburger
+    let menu = document.getElementById("menu");
+    menu.addEventListener("click", function onClickMenu() {
+      console.log("Click");
+      document.getElementById("menu").classList.toggle("icon");
+      document.getElementById("nav").classList.toggle("change");
     });
   </script>
 </html>
