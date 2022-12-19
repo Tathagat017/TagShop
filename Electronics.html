@@ -111,21 +111,21 @@
       }
 
       /* #hamburger > button {
-        height: 65px;
-        width: 65px;
-        cursor: pointer;
-        margin-left: 0px;
-        font-family: "PT Sans", sans-serif;
-        transition: transform 0.2s;
-      } */
+              height: 65px;
+              width: 65px;
+              cursor: pointer;
+              margin-left: 0px;
+              font-family: "PT Sans", sans-serif;
+              transition: transform 0.2s;
+            } */
 
       /* #hamburger > button:hover {
-        transform: scale(1.2);
-      } */
+              transform: scale(1.2);
+            } */
 
       /* #hamburger a :hover {
-        color: tomato;
-      } */
+              color: tomato;
+            } */
 
       #hamburger {
         margin-left: 10px;
@@ -556,6 +556,18 @@
         }
       }
 
+      #banner {
+        width: 50em;
+        height: 20em;
+        margin: auto;
+        margin-top: 2%;
+      }
+      #banner img {
+        width: 100%;
+        height: 2%;
+        cursor: pointer;
+      }
+
       #product-container {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
@@ -572,8 +584,10 @@
         line-height: 130%;
       }
       .displayMain > img {
-        width: 95%;
-        height: 50%;
+        width: 100%;
+        height: 60%;
+        transition: transform 0.2ms;
+        cursor: pointer;
       }
       .displayMain > button {
         background-color: rgb(72, 14, 126);
@@ -587,6 +601,7 @@
       .displayMain > button:hover {
         background-color: tomato;
       }
+
       #Main {
         margin: 2%;
         text-align: center;
@@ -599,75 +614,6 @@
         border-radius: 20px;
         margin-left: 2%;
         font-size: large;
-      }
-
-      .navy {
-        display: flex;
-        color: #0a1922;
-        justify-content: space-around;
-        background-color: rgb(238, 172, 228);
-        font-size: xx-large;
-      }
-      .navy a {
-        text-decoration: none;
-        text-decoration: #3a1342;
-      }
-      .navy a:hover {
-        color: tomato;
-      }
-
-      #signin input {
-        display: block;
-      }
-
-      .input-icons2 {
-        background: url("https://i.pinimg.com/736x/87/a1/12/87a1122a61a8cdde29f44a12c3a9992f.jpg")
-          no-repeat scroll 7px 7px;
-        background-size: 5%;
-        padding-left: 30px;
-        color: #000000;
-        font-size: large;
-        margin: auto;
-        margin-top: 2.5%;
-        background-color: #cccccc;
-      }
-
-      .input-icons1 {
-        background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSg0LD81PklvVRfPSdkkN6-JwUNgCmk2ZAsLoSKTajR6g&s")
-          no-repeat scroll 8px 8px;
-        background-size: 6.5%;
-        padding-left: 30px;
-        color: #000000;
-        font-size: large;
-        margin: auto;
-        margin-top: 2.5%;
-        background-color: #cccccc;
-      }
-      .input-icons0 {
-        background: url("https://cdn-icons-png.flaticon.com/512/1828/1828312.png")
-          no-repeat scroll 8px 8px;
-        background-size: 6.5%;
-        padding-left: 30px;
-        color: #000000;
-        font-size: large;
-        margin: auto;
-        margin-top: 2.5%;
-        background-color: #cccccc;
-      }
-
-      .input-icons3 {
-        margin: auto;
-        margin-top: 1.5%;
-      }
-
-      #signin {
-        background-color: #b45dbf;
-        margin: auto;
-        text-align: center;
-        color: #ffffff;
-        height: 30em;
-        background-image: url("https://media.istockphoto.com/id/1200781362/photo/abstract-textured-background-in-purple.jpg?s=612x612&w=0&k=20&c=rRUz4ATGIsYP2E7Z_T2joAzL_kPXqAOJ7YAugSwTao0=");
-        background-size: 100% 100%;
       }
     </style>
   </head>
@@ -723,14 +669,16 @@
             <div id="bar3" class="bar"></div>
             <ul id="nav" class="nav">
               <li>
-                <a href="" class="navOption"><p>Shoes</p></a>
+                <a href="Shoes.html" class="navOption"><p>Shoes</p></a>
               </li>
-              <li><a href="" class="navOption">Clothing</a></li>
-              <li><a href="" class="navOption">Electronics</a></li>
+              <li><a href="clothing.html" class="navOption">Clothing</a></li>
+              <li>
+                <a href="Electronics.html" class="navOption">Electronics</a>
+              </li>
               <li><a href="" class="navOption">Beauty</a></li>
               <li><a href="" class="navOption">Health and Nutrition</a></li>
               <li><a href="" class="navOption">Jewelry</a></li>
-              <li><a href="" class="navOption">Home</a></li>
+              <li><a href="index.html" class="navOption">Home</a></li>
             </ul>
           </div>
         </div>
@@ -749,7 +697,7 @@
           </select>
           <input
             type="text"
-            id="search"
+            id="search1"
             value=""
             placeholder="search the entire shop"
           />
@@ -758,10 +706,10 @@
           </button>
         </div>
 
-        <a class="choose" href="">Electronics</a>
-        <a class="choose" href="">Beauty</a>
-        <a class="choose" href="">Exclusive Brands</a>
-        <a class="choose" href="">Deals</a>
+        <a class="choose" href="Electronics.html">Electronics</a>
+        <a class="choose" href="clothing.html">Beauty</a>
+        <a class="choose" href="clothing.html">Exclusive Brands</a>
+        <a class="choose" href="Shoes.html">Deals</a>
         <a class="choose" href="">Shop Local</a>
 
         <button class="icons">
@@ -806,17 +754,23 @@
     <div id="Main">
       <select id="filter">
         <option value="">Filter By Category</option>
-        <option value="Men">Men</option>
-        <option value="Women">Women</option>
-        <option value="Kids">Kids</option>
+        <option value="Speaker">Speaker</option>
+        <option value="Laptop">Laptop</option>
+        <option value="Monitor">Monitor</option>
+        <option value="Hardisk">Hardisk</option>
       </select>
-
+      <select id="sort" onChange="handlePrice()">
+        <option value="LTH">Low to High</option>
+        <option value="HTL">High to Low</option>
+      </select>
+      <input id="search" type="text" value="" />
       <select id="brandFilter">
         <option value="">Filter By Brand</option>
-        <option value="Nike">Nike</option>
-        <option value="Adidas">Adidas</option>
-        <option value="Puma">Puma</option>
-        <option value="Woakers">Woakerss</option>
+        <option value="Samsung">Samsung</option>
+        <option value="Lenovo">Lenovo</option>
+        <option value="Dell">Dell</option>
+        <option value="Boat">Boat</option>
+        <option value="WD">WD</option>
       </select>
 
       <div id="product-container"></div>
@@ -828,37 +782,6 @@
           alt=""
         />
       </div>
-    </div>
-
-    <div class="navy">
-      <a href="singIN.html">Signin</a>
-      <a href="signUP.html">Signup</a>
-    </div>
-    <div id="signin">
-      <h1 id="heading">Please Enter Your Details</h1>
-      <form id="login">
-        <input
-          class="input-icons0"
-          type="text"
-          name="Name"
-          id="name"
-          placeholder="Please enter your Name"
-        />
-        <input
-          class="input-icons1"
-          type="email"
-          id="email"
-          placeholder="Please enter your email ID"
-        />
-        <input
-          class="input-icons2"
-          type="password"
-          id="password"
-          placeholder="Please enter your password"
-        />
-
-        <input class="input-icons3" type="submit" value="Login" />
-      </form>
     </div>
   </body>
   <script>
@@ -897,7 +820,48 @@
       });
     });
 
+    //slideshow
+    let imgArray = [
+      "https://m.media-amazon.com/images/I/61aURrton0L._SX3000_.jpg",
+      "https://m.media-amazon.com/images/G/31/img19/AMS/Houseads/Laptops-Sept2019._CB436595915_.jpg",
+      "https://cdn.grabon.in/gograbon/images/web-images/uploads/1621488513434/today-electronics-offers.jpg",
+      "http://www.shopickr.com/wp-content/uploads/2015/10/amazon-india-electronics-sale-2015-banner1.jpg",
+    ];
+
+    let image = document.createElement("img");
+    let cont = document.getElementById("banner");
+    image.src = imgArray[1];
+    image.style.width = "100%";
+    image.style.height = "100%";
+    cont.appendChild(image);
+
+    let i = 0;
+    setInterval(() => {
+      image.setAttribute("src", imgArray[i]);
+      image.style.width = "100%";
+      image.style.height = "100%";
+      cont.append(image);
+      i++;
+      if (i > imgArray.length - 1) {
+        i = 0;
+      }
+    }, 5000);
+
     // Main Display
+
+    // sort
+    function handlePrice() {
+      let selected = document.getElementById("sort").value;
+      console.log(selected);
+      if (selected == "LTH") {
+        fetchedData.sort((a, b) => a.price - b.price);
+      }
+      if (selected == "HTL") {
+        fetchedData.sort((a, b) => b.price - a.price);
+      }
+      displayProducts(fetchedData);
+    }
+    // filter+display
     let container = document.getElementById("product-container");
     let filterSelect = document.getElementById("filter");
     let filterSelect2 = document.getElementById("brandFilter");
@@ -916,7 +880,7 @@
     });
 
     filterSelect2.addEventListener("change", () => {
-      let fil = fetchedData2.filter((element) => {
+      let fil = fetchedData.filter((element) => {
         if (element.Brand == filterSelect2.value) {
           return true;
         } else {
@@ -927,7 +891,7 @@
       displayProducts(fil);
     });
 
-    fetch("./Shoes.json")
+    fetch("./electronics.json")
       .then((responseObject) => {
         return responseObject.json();
       })
@@ -979,11 +943,11 @@
           }
 
           if (isAdleadyInCart === true) {
-            alert("Product ALREADY in Cart");
+            alert("Product Already in Cart");
           } else {
             cartData.push({ ...element, quantity: 1 });
             localStorage.setItem("cart", JSON.stringify(cartData));
-            alert("Product ADDED To Cart");
+            alert("Product Added To Cart");
           }
         });
 
@@ -992,28 +956,6 @@
       });
     }
 
-    let mainDis = document.getElementById("Main");
-    mainDis.innerHTML = null;
-
-    let ban = document.getElementById("banner");
-    ban.innerHTML = null;
-
-    let form = document.getElementById("login");
-    let signData = JSON.parse(localStorage.getItem("account-data")) || [];
-    form.addEventListener("submit", (event) => {
-      event.preventDefault();
-
-      let user = {
-        name: form.name.value,
-        email: form.email.value,
-        password: form.password.value,
-      };
-
-      signData.push(user);
-
-      localStorage.setItem("account-data", JSON.stringify(signData));
-    });
-
     // Menu Hamburger
     let menu = document.getElementById("menu");
     menu.addEventListener("click", function onClickMenu() {
@@ -1021,5 +963,31 @@
       document.getElementById("menu").classList.toggle("icon");
       document.getElementById("nav").classList.toggle("change");
     });
+
+    // search
+    let q = document.getElementById("search").addEventListener("input", (e) => {
+      let input = e.target.value;
+      console.log(input);
+      let searced = fetchedData2.filter((el, index) => {
+        if (el.Brand.toLowerCase().includes(input.toLowerCase())) {
+          return true;
+        }
+      });
+      displayProducts(searced);
+    });
+
+    //Menu Search
+    let m = document
+      .getElementById("search1")
+      .addEventListener("input", (f) => {
+        let input1 = f.target.value;
+        console.log(input1);
+        let searced = fetchedData2.filter((el, index) => {
+          if (el.Brand.toLowerCase().includes(input1.toLowerCase())) {
+            return true;
+          }
+        });
+        displayProducts(searced);
+      });
   </script>
 </html>

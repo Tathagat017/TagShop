@@ -666,14 +666,14 @@
             <div id="bar3" class="bar"></div>
             <ul id="nav" class="nav">
               <li>
-                <a href="" class="navOption"><p>Shoes</p></a>
+                <a href="Shoes.html" class="navOption"><p>Shoes</p></a>
               </li>
-              <li><a href="" class="navOption">Clothing</a></li>
+              <li><a href="clothing.html" class="navOption">Clothing</a></li>
               <li><a href="" class="navOption">Electronics</a></li>
               <li><a href="" class="navOption">Beauty</a></li>
               <li><a href="" class="navOption">Health and Nutrition</a></li>
               <li><a href="" class="navOption">Jewelry</a></li>
-              <li><a href="" class="navOption">Home</a></li>
+              <li><a href="index.html" class="navOption">Home</a></li>
             </ul>
           </div>
         </div>
@@ -692,7 +692,7 @@
           </select>
           <input
             type="text"
-            id="search"
+            id="search1"
             value=""
             placeholder="search the entire shop"
           />
@@ -747,6 +747,11 @@
 
     <!-- Main Display -->
     <div id="Main">
+      <select id="sort" onChange="handlePrice()">
+        <option value="LTH">Low to High</option>
+        <option value="HTL">High to Low</option>
+      </select>
+      <input id="search" type="text" value="" />
       <select id="filter">
         <option value="">Filter By Category</option>
         <option value="Men">Men</option>
@@ -838,6 +843,22 @@
     }, 5000);
 
     // Main Display
+
+    // sort
+
+    function handlePrice() {
+      let selected = document.getElementById("sort").value;
+      console.log(selected);
+      if (selected == "LTH") {
+        fetchedData.sort((a, b) => a.price - b.price);
+      }
+      if (selected == "HTL") {
+        fetchedData.sort((a, b) => b.price - a.price);
+      }
+      displayProducts(fetchedData);
+    }
+
+    //filter + display
     let container = document.getElementById("product-container");
     let filterSelect = document.getElementById("filter");
     let filterSelect2 = document.getElementById("brandFilter");
@@ -856,7 +877,7 @@
     });
 
     filterSelect2.addEventListener("change", () => {
-      let fil = fetchedData2.filter((element) => {
+      let fil = fetchedData.filter((element) => {
         if (element.Brand == filterSelect2.value) {
           return true;
         } else {
@@ -932,6 +953,19 @@
       });
     }
 
+    // search
+    let q = document.getElementById("search").addEventListener("input", (e) => {
+      let input = e.target.value;
+      console.log(input);
+      let searced = fetchedData2.filter((el, index) => {
+        if (el.Brand.toLowerCase().includes(input.toLowerCase())) {
+          return true;
+        }
+      });
+      displayProducts(searced);
+    });
+
+    //
     // Menu Hamburger
     let menu = document.getElementById("menu");
     menu.addEventListener("click", function onClickMenu() {
@@ -939,5 +973,19 @@
       document.getElementById("menu").classList.toggle("icon");
       document.getElementById("nav").classList.toggle("change");
     });
+
+    //Menu Search
+    let m = document
+      .getElementById("search1")
+      .addEventListener("input", (f) => {
+        let input1 = f.target.value;
+        console.log(input1);
+        let searced = fetchedData2.filter((el, index) => {
+          if (el.Brand.toLowerCase().includes(input1.toLowerCase())) {
+            return true;
+          }
+        });
+        displayProducts(searced);
+      });
   </script>
 </html>

@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=PT+Sans:ital@1&display=swap");
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+
+      #N0 {
+        background-color: rgb(12, 10, 62);
+        border: 1px invisible red;
+        text-align: center;
+        width: 100%;
+        box-sizing: border-box;
+        padding-top: 0;
+        display: flex;
+        text-align: center;
+        justify-content: space-between;
+        background-image: linear-gradient(rgb(6, 5, 32), rgb(147, 20, 186));
+      }
+
+      #N0 a {
+        text-decoration: none;
+      }
+      #N0 a > h3 {
+        color: rgb(255, 255, 255);
+        font-style: italic;
+        font-family: "Oleo Script", Helvetica, sans-serif;
+        line-height: 30px;
+        font-size: larger;
+        font-variant: small-caps;
+      }
+
+      .copy-link {
+        --height: 46px;
+
+        display: flex;
+        max-width: 250px;
+        margin-left: 42%;
+        margin-top: 1.5%;
+        margin-bottom: 0.5%;
+      }
+
+      .copy-link-input {
+        flex-grow: 1;
+        padding: 0 8px;
+        font-size: 14px;
+        border: 1px solid #cccccc;
+        border-right: none;
+        outline: none;
+        text-align: center;
+        font-weight: bold;
+        background-color: rgb(12, 10, 62);
+        color: rgb(255, 255, 255);
+      }
+
+      .copy-link-input:hover {
+        background: rgb(232, 195, 227);
+        color: black;
+      }
+
+      .copy-link-button {
+        flex-shrink: 0;
+        width: var(--height);
+        height: var(--height);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #dddddd;
+        color: #333333;
+        outline: none;
+        border: 1px solid #cccccc;
+        cursor: pointer;
+      }
+
+      .copy-link-button:hover {
+        background: #757575;
+      }
+
+      #logo {
+        width: 100%;
+        height: 100%;
+        margin: 0px;
+        border-radius: 15%;
+      }
+
+      #logoButton {
+        border-radius: 20%;
+        background-color: #0a1922;
+      }
+      #logoButton img {
+        width: 110%;
+        height: 100%;
+        border-radius: 13%;
+      }
+
+      #N0 > button:nth-child(1) {
+        width: 5%;
+        border: 1px solid rgb(12, 10, 62);
+        cursor: pointer;
+      }
+
+      /* #hamburger > button {
+        height: 65px;
+        width: 65px;
+        cursor: pointer;
+        margin-left: 0px;
+        font-family: "PT Sans", sans-serif;
+        transition: transform 0.2s;
+      } */
+
+      /* #hamburger > button:hover {
+        transform: scale(1.2);
+      } */
+
+      /* #hamburger a :hover {
+        color: tomato;
+      } */
+
+      #hamburger {
+        margin-left: 10px;
+        margin-bottom: 10px;
+        margin-top: 2%;
+        padding: 0px;
+        cursor: pointer;
+        font-family: "PT Sans", sans-serif;
+      }
+
+      #menu {
+        width: 35px;
+        height: 30px;
+        margin: 15%;
+        cursor: pointer;
+        z-index: 100;
+        margin: auto;
+      }
+
+      .bar {
+        height: 5px;
+        width: 100%;
+        background-color: rgb(12, 10, 62);
+        display: block;
+        border-radius: 5px;
+        transition: 0.3s ease;
+      }
+
+      #bar1 {
+        transform: translateY(-4px);
+      }
+
+      #bar3 {
+        transform: translateY(4px);
+      }
+
+      .nav {
+        width: 100px;
+        height: 100px;
+        margin: auto;
+        padding: 5%;
+        transition: 1s ease;
+        display: none;
+        cursor: pointer;
+      }
+
+      .nav li a {
+        color: black;
+        text-decoration: none;
+      }
+
+      #nav li > a :hover {
+        border: 1px brown hidden;
+        text-decoration: tomato;
+      }
+
+      .nav li {
+        list-style: none;
+        padding: 16px 0px;
+      }
+
+      .icon.bar {
+        background-color: #000000;
+      }
+
+      .icon #bar1 {
+        transform: translateY(4px) rotate(-45deg);
+      }
+
+      .icon #bar3 {
+        transform: translateY(-6px) rotate(45deg);
+      }
+      .icon #bar2 {
+        opacity: 0;
+      }
+
+      .change {
+        background-color: rgb(225, 180, 238);
+        height: 100vh;
+        margin: 0px;
+        font-size: 30px;
+        position: absolute;
+        top: 0;
+        z-index: -100;
+        width: 20%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: transform 0.2s;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+          rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+          rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+      }
+
+      .change :hover {
+        color: tomato;
+        text-decoration: tomato;
+        transform: scale(1.1);
+      }
+
+      #navContainer {
+        width: 100%;
+        border: 1px solid rgb(12, 10, 62);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: 0px;
+        padding: 0.4%;
+        box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+        padding-left: 0px;
+        box-sizing: border-box;
+        background-color: white;
+      }
+
+      #N12-bars {
+        height: 60px;
+        width: 500px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: rgb(12, 10, 62);
+        border: 2px solid rgb(12, 10, 62);
+        cursor: pointer;
+        border-radius: 28px;
+        transition: none;
+        overflow: none;
+        padding: 0px;
+      }
+
+      #N12-bars input {
+        height: 60px;
+        width: 250px;
+        border: hidden;
+        border-left: 1px solid rgb(12, 10, 62);
+        overflow: hidden;
+        margin: 0px;
+        font-size: larger;
+      }
+      #N12-bars select {
+        height: 60px;
+        width: 180px;
+        border-radius: 20px;
+        border: hidden;
+        margin: 0px;
+        text-align: center;
+        font-weight: bold;
+        border-radius: 25px;
+        border-top-right-radius: 0px 0px;
+        border-bottom-right-radius: 0px 0px;
+      }
+
+      #N12-bars button {
+        height: 62px;
+        width: 65px;
+        cursor: pointer;
+        border-radius: 25px;
+        border: hidden;
+        background-color: rgb(12, 10, 62);
+        color: white;
+        border-top-left-radius: 0px 0px;
+        border-bottom-left-radius: 0px 0px;
+        margin: 0px;
+      }
+      .material-icons {
+        margin: 0px;
+      }
+
+      .icons {
+        width: 60px;
+        border: hidden;
+        background-color: white;
+        cursor: pointer;
+        transition: transform 0.2s;
+      }
+      .icons:hover {
+        transform: scale(1.19);
+      }
+      .iconImg {
+        width: 100%;
+        height: 100%;
+      }
+
+      .choose {
+        color: rgb(51, 7, 93);
+        text-decoration: none;
+      }
+      .choose:hover {
+        color: rgb(9, 42, 58);
+        background-color: #eeeded;
+        font-size: larger;
+      }
+
+      #search {
+        text-align: center;
+      }
+
+      .option {
+        text-align: justify;
+        font-size: large;
+      }
+
+      #search-btn {
+        transition: transform 0.2s;
+      }
+
+      #search-btn:hover {
+        transform: scale(1.15);
+      }
+      #term {
+        width: 100%;
+        height: 80%;
+        border: 1px teal;
+        text-align: center;
+      }
+
+      h2 {
+        color: teal;
+        text-align: center;
+      }
+
+      hr {
+        background-color: teal;
+      }
+
+      p {
+        font-size: large;
+        font-family: "Times New Roman", Times, serif;
+        word-spacing: 2%;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div id="N0">
+        <button type="button" id="logoButton">
+          <a href="./index.html"
+            ><img
+              src="./logo/tagshop-high-resolution-color-logo.png"
+              alt=""
+              id="logo"
+          /></a>
+        </button>
+        <div id="navCoupon">
+          <a href="https://www.shop.com/first_25_Off_Terms-v.xhtml"
+            ><h3 class="glow">
+              <marquee width="96%" direction="right" height="30px">
+                1st time customers save 25% on TagShop exclusive brands! Please
+                click here to learn more or click on below icon to
+                copy.</marquee
+              >
+            </h3>
+          </a>
+
+          <script
+            type="text/javascript"
+            async
+            src="https://tenor.com/embed.js"
+          ></script>
+          <div class="copy-link">
+            <input
+              type="text"
+              class="copy-link-input glow"
+              value="FIRSTOFF25"
+              readonly
+            />
+            <button type="button" class="copy-link-button">
+              <span class="material-icons">content_copy</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- all nav container here -->
+      <div id="navContainer">
+        <div id="hamburger">
+          <!-- <button type="button" id="hamburger">
+            <span class="material-icons" onclick="onClickMenu()"> menu </span>
+          </button> -->
+          <div id="menu">
+            <div id="bar1" class="bar"></div>
+            <div id="bar2" class="bar"></div>
+            <div id="bar3" class="bar"></div>
+            <ul id="nav" class="nav">
+              <li>
+                <a href="Shoes.html" class="navOption"><p>Shoes</p></a>
+              </li>
+              <li><a href="clothing.html" class="navOption">Clothing</a></li>
+              <li>
+                <a href="Electronics.html" class="navOption">Electronics</a>
+              </li>
+              <li><a href="" class="navOption">Beauty</a></li>
+              <li><a href="" class="navOption">Health and Nutrition</a></li>
+              <li><a href="" class="navOption">Jewelry</a></li>
+              <li><a href="index.html" class="navOption">Home</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div id="N12-bars">
+          <select name="category" id="category">
+            <option value="" class="option">All departments</option>
+            <option value="" class="option">Books</option>
+            <option value="" class="option">Clothes</option>
+            <option value="" class="option">Electronics</option>
+            <option value="" class="option">Gardening</option>
+            <option value="" class="option">Gift</option>
+            <option value="" class="option">Health and Nutrition</option>
+            <option value="" class="option">Jewelry</option>
+            <option value="" class="option">Shoes</option>
+          </select>
+          <input
+            type="text"
+            id="search"
+            value=""
+            placeholder="search the entire shop"
+          />
+          <button type="button" id="search-btn">
+            <span class="material-icons"> search </span>
+          </button>
+        </div>
+
+        <a class="choose" href="Electronics.html">Electronics</a>
+        <a class="choose" href="">Beauty</a>
+        <a class="choose" href="Shoes.html">Exclusive Brands</a>
+        <a class="choose" href="clothing.html">Deals</a>
+        <a class="choose" href="">Shop Local</a>
+
+        <button class="icons">
+          <a href="singIN.html">
+            <img class="iconImg" src="./icons/login.png" alt=""
+          /></a>
+        </button>
+
+        <button class="icons">
+          <a href="index.html">
+            <img class="iconImg" src="./icons/reloading.png" alt=""
+          /></a>
+        </button>
+        <button class="icons">
+          <a href="cart.html"
+            ><img class="iconImg" src="./icons/trolley.png" alt=""
+          /></a>
+        </button>
+      </div>
+    </nav>
+    <div id="term">
+      <h2>Terms & Conditions</h2>
+      <hr />
+      <p>
+        SAVE 25% OFF YOUR FIRST ORDER OF SHOP.COM EXCLUSIVE BRANDS. DISCOUNT IS
+        LIMITED TO $25, AND WILL BE APPLIED AS A 25% DISCOUNT TO THE FIRST $100
+        OF YOUR ORDER: This promotion is only applicable to fully registered
+        customers of SHOP.COM. Guest Checkout customers do not qualify. This
+        offer is only available to first-time purchasers of SHOP.COM who are not
+        affiliated with an UnFranchise Owner/Shop Consultant before the time of
+        purchase. If this is the first time you've purchased a qualifying
+        product, place qualifying items in your cart, provide the coupon code
+        FIRST25OFF and complete your order before closing your browser or
+        leaving the page. Discounted prices will be displayed in your shopping
+        cart during the checkout process, before your order is final. The 25%
+        discount will be applied evenly to the first qualifying products in your
+        order, up to a maximum savings of $25. Qualifying products are limited
+        to SHOP.COM exclusive brands’ products purchased through SHOP.COM, and
+        no other products. Product brands included in this promotion are limited
+        to: Advanced Level 90®, Autoworks™, Awake®, Bliss™, CannabiCool™,
+        CannabiQuin™, Cellular Laboratories®, Choice™, Clear Shield®, Conquer
+        Entertainment®, Curcumin Extreme™, Custom Cocktail, DNA Miracles®,
+        Fixx™,, Friction Free 3000™, GlobalCare™, Glucosatrin®, Heart Health™,
+        Isotonix®, Layered, Lumiere de Vie®, Lumiere de Vie® Hommes,
+        MochaTonix®, Motives® by Loren Ridinger, Motives® for La La, MPC®,
+        NutriClean®, Nutri-Physical®, Oxygen Extreme™, OPC-3® Chews, Pentaxyl®,
+        PetHealth™, Prime™, Probiotics-10, PureH2O™, Pure Collagen, Royal Spa®,
+        Skintelligence®, Snap™, Stealth Radar Shield™, Thymenol™, Timeless
+        Prescription®, TLS® Weight Loss Solution, Ultimate Aloe™, vitamind®, and
+        VitaShield®. The extra savings available through this promotion is
+        available from 12/31/22 and ends 12/31/23 at 23:59 (PST). We reserve the
+        right to end the promotion at any time.
+      </p>
+    </div>
+  </body>
+</html>

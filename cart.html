@@ -847,79 +847,85 @@
 
     // cart
     let container = document.getElementById("cart-container");
-
-    let cartData = JSON.parse(localStorage.getItem("cart"));
-    if (cartData === null) {
-      cartData = [];
+    let total = document.getElementById("cart-total");
+    let favData = JSON.parse(localStorage.getItem("cart"));
+    if (favData == null) {
+      favData = [];
     }
 
-    displayProducts(cartData);
-
-    function displayProducts(data) {
+    display(favData);
+    function display(data) {
+      let totalCount = favData.length;
+      total.innerText = totalCount;
       container.innerHTML = null;
 
-      data.forEach((element) => {
+      data.forEach((element, index) => {
         let card = document.createElement("div");
 
         let image = document.createElement("img");
         image.setAttribute("src", element.image);
 
-        let brand = document.createElement("h2");
-        brand.innerText = element.Brand;
+        let name = document.createElement("h2");
+        name.innerText = element.Brand;
 
         let price = document.createElement("h3");
         price.innerText = element.price;
 
-        let details = document.createElement("p");
-        details.innerText = element.description;
+        let type = document.createElement("p");
+        type.innerText = element.description;
 
-        let category = document.createElement("p");
-        category.innerText = element.category;
+        let rating = document.createElement("p");
+        rating.innerText = element.category;
 
+        let quantity = document.createElement("p");
+        quantity.innerText = element.quantity;
         let increment = document.createElement("button");
         increment.innerText = "+";
-
-        let quantity = document.createElement("span");
-        quantity.innerText = element.quantity;
-
         let decrement = document.createElement("button");
         decrement.innerText = "-";
 
-        let remove = document.createElement("button");
-        remove.innerText = "Remove";
+        let Delete = document.createElement("button");
+        Delete.innerText = "Delete";
 
-        let total = document.createElement("cart-total");
-
-        remove.addEventListener("click", () => {
-          cartData = cartData.filter((el, index) => {
-            if (index == i) {
+        Delete.addEventListener("click", () => {
+          favData = favData.filter((el, i) => {
+            if (i == index) {
               return false;
             } else {
               return true;
             }
           });
-          displayProducts(cartData);
-        });
-        var i = 1;
-        increment.addEventListener("click", () => {
-          quantity.innerText = ++i;
+          localStorage.setItem("cart", JSON.stringify(favData));
+          display(favData);
         });
 
+        increment.addEventListener("click", () => {
+          quantity.innerText++;
+          element.quantity++;
+          cartData[index] = element;
+          localStorage.setItem("cart", JSON.stringify(cartData));
+          display(cartData);
+        });
         decrement.addEventListener("click", () => {
-          quantity.innerText = --i;
+          if (element.quantity > 1) {
+            quantity.innerText--;
+            element.quantity--;
+            cartData[index] = element;
+            localStorage.setItem("cart", JSON.stringify(cartData));
+            display(cartData);
+          }
         });
 
         card.append(
           image,
-          brand,
+          name,
           price,
-          details,
-          category,
-          increment,
+          type,
+          rating,
           quantity,
-          decrement,
-          remove,
-          total
+          increment,
+          Delete,
+          decrement
         );
         container.append(card);
       });

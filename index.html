@@ -666,10 +666,14 @@
       }
 
       .footer {
+        width: 100%;
+        height: 150px;
         background-color: #333333;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        margin-top: 2%;
+        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
       }
 
       .row-1 p {
@@ -692,6 +696,18 @@
         color: whitesmoke;
         margin-left: 10px;
       }
+
+      #footerimg {
+        width: 100%;
+        text-align: center;
+        background-color: rgb(221, 216, 216);
+      }
+      #footerimg > img {
+        width: 100%;
+        height: 170px;
+        margin: auto;
+        cursor: pointer;
+      }
     </style>
   </head>
   <body>
@@ -706,7 +722,7 @@
           /></a>
         </button>
         <div id="navCoupon">
-          <a href="https://www.shop.com/first_25_Off_Terms-v.xhtml"
+          <a href="terms.html"
             ><h3 class="glow">
               <marquee width="96%" direction="right" height="30px">
                 1st time customers save 25% on TagShop exclusive brands! Please
@@ -749,7 +765,9 @@
                 <a href="Shoes.html" class="navOption"><p>Shoes</p></a>
               </li>
               <li><a href="clothing.html" class="navOption">Clothing</a></li>
-              <li><a href="" class="navOption">Electronics</a></li>
+              <li>
+                <a href="Electronics.html" class="navOption">Electronics</a>
+              </li>
               <li><a href="" class="navOption">Beauty</a></li>
               <li><a href="" class="navOption">Health and Nutrition</a></li>
               <li><a href="" class="navOption">Jewelry</a></li>
@@ -781,10 +799,10 @@
           </button>
         </div>
 
-        <a class="choose" href="">Electronics</a>
+        <a class="choose" href="Electronics.html">Electronics</a>
         <a class="choose" href="">Beauty</a>
-        <a class="choose" href="clothing.html">Exclusive Brands</a>
-        <a class="choose" href="Shoes.html">Deals</a>
+        <a class="choose" href="Shoes.html">Exclusive Brands</a>
+        <a class="choose" href="clothing.html">Deals</a>
         <a class="choose" href="">Shop Local</a>
 
         <button class="icons">
@@ -873,10 +891,11 @@
       <div class="cardb2">
         <div id="extraSign">
           <h4>For better experience</h4>
-          <button id="extraSignIn">
-            Sign up/Login
-            <img src="./icons/user-login-security-11951.png" alt="" />
-          </button>
+          <a href="singin.html"
+            ><button id="extraSignIn">
+              Sign up/Login
+              <img src="./icons/user-login-security-11951.png" alt="" /></button
+          ></a>
         </div>
         <img
           src="https://img.shop.com/Image/homepage/stocking-stuffers-media-300x250-img1669837197571.jpg"
@@ -977,7 +996,7 @@
 
     <!-- Fifa Worldcup -->
     <div id="fifagif">
-      <a href="“somesite.html”">
+      <a href="Shoes.html">
         <img
           src="./landing/banner5/web-FIFA-Strip-Web-15112022.gif"
           height="300px"
@@ -988,15 +1007,16 @@
 
     <!-- carousel fifa -->
 
-    <div id="carousel">
-      <button id="next">
-        <img src="./landing/caraousel/button/prev.png" alt="" />
-      </button>
-      <div id="carImage"></div>
-      <button id="previous">
-        <img src="./landing/caraousel/button/next.jpg" alt="" />
-      </button>
-    </div>
+    <a href="clothing.html"
+      ><div id="carousel">
+        <button id="next">
+          <img src="./landing/caraousel/button/prev.png" alt="" />
+        </button>
+        <div id="carImage"></div>
+        <button id="previous">
+          <img src="./landing/caraousel/button/next.jpg" alt="" />
+        </button></div
+    ></a>
 
     <!-- popular brands2 -->
     <h2 id="popularHeading2">Branded Store : Clothing</h2>
@@ -1041,6 +1061,68 @@
       </div>
     </div>
 
+    <!-- next 4 divs -->
+
+    <!-- Banner - four cards -->
+    <div id="banner4">
+      <div class="banner4C">
+        <img
+          src="https://img.shop.com/Image/homepage/us-eng-bbb-memorialday-media-may211670870263691.jpg"
+          alt=""
+        />
+        <h3>2.00 %</h3>
+        <img
+          class="cashback-logo"
+          src="./logo/tagshop-high-resolution-color-logo.png"
+          alt=""
+        />
+        <h3>Cashback</h3>
+        <p>JC Penney Up to 50% Off</p>
+      </div>
+      <div class="banner4C">
+        <img
+          src="https://img.shop.com/Image/homepage/us-eng-michaelkors-hp-media-oct20221670967949815.jpeg"
+          alt=""
+        />
+        <h3>2.00 %</h3>
+        <img
+          class="cashback-logo"
+          src="./logo/tagshop-high-resolution-color-logo.png"
+          alt=""
+        />
+        <h3>Cashback</h3>
+        <p>Up to 50% off Last Minute Gifting</p>
+      </div>
+      <div class="banner4C">
+        <img
+          src="https://img.shop.com/Image/homepage/us-eng-oerstock-hp-media-dec221670968240105.png"
+          alt=""
+        />
+        <h3>2.00 %</h3>
+        <img
+          class="cashback-logo"
+          src="./logo/tagshop-high-resolution-color-logo.png"
+          alt=""
+        />
+        <h3>Cashback</h3>
+        <p>Up to 50% off Last Minute Gifting</p>
+      </div>
+      <div class="banner4C">
+        <img
+          src="https://img.shop.com/Image/homepage/shop-en-us-Marshalls-FreeShip-300x2501668727246227-img.jpg"
+          alt=""
+        />
+        <h3>2.00 %</h3>
+        <img
+          class="cashback-logo"
+          src="./logo/tagshop-high-resolution-color-logo.png"
+          alt=""
+        />
+        <h3>Cashback</h3>
+        <p>40% Off Your Purchase!.</p>
+      </div>
+    </div>
+
     <!-- arrow -->
     <div id="arrowbtn">
       <img
@@ -1077,6 +1159,9 @@
         of cashback on qualifying purchases.
       </p>
     </section>
+    <div id="footerimg">
+      <img src="./footer/Screenshot 2022-12-19 174149.jpg" alt="" />
+    </div>
   </body>
   <script>
     // copy coupon
