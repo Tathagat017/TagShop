@@ -111,21 +111,21 @@
       }
 
       /* #hamburger > button {
-              height: 65px;
-              width: 65px;
-              cursor: pointer;
-              margin-left: 0px;
-              font-family: "PT Sans", sans-serif;
-              transition: transform 0.2s;
-            } */
+        height: 65px;
+        width: 65px;
+        cursor: pointer;
+        margin-left: 0px;
+        font-family: "PT Sans", sans-serif;
+        transition: transform 0.2s;
+      } */
 
       /* #hamburger > button:hover {
-              transform: scale(1.2);
-            } */
+        transform: scale(1.2);
+      } */
 
       /* #hamburger a :hover {
-              color: tomato;
-            } */
+        color: tomato;
+      } */
 
       #hamburger {
         margin-left: 10px;
@@ -556,18 +556,6 @@
         }
       }
 
-      #banner {
-        width: 50em;
-        height: 20em;
-        margin: auto;
-        margin-top: 2%;
-      }
-      #banner img {
-        width: 100%;
-        height: 2%;
-        cursor: pointer;
-      }
-
       #product-container {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
@@ -584,10 +572,8 @@
         line-height: 130%;
       }
       .displayMain > img {
-        width: 100%;
-        height: 60%;
-        transition: transform 0.2ms;
-        cursor: pointer;
+        width: 95%;
+        height: 50%;
       }
       .displayMain > button {
         background-color: rgb(72, 14, 126);
@@ -601,7 +587,6 @@
       .displayMain > button:hover {
         background-color: tomato;
       }
-
       #Main {
         margin: 2%;
         text-align: center;
@@ -614,6 +599,63 @@
         border-radius: 20px;
         margin-left: 2%;
         font-size: large;
+      }
+
+      .navy {
+        display: flex;
+        color: #0a1922;
+        justify-content: space-around;
+        background-color: rgb(238, 172, 228);
+        font-size: xx-large;
+      }
+      .navy a {
+        text-decoration: none;
+        text-decoration: #3a1342;
+      }
+      .navy a:hover {
+        color: tomato;
+      }
+
+      #signin input {
+        display: block;
+      }
+
+      .input-icons2 {
+        background: url("https://i.pinimg.com/736x/87/a1/12/87a1122a61a8cdde29f44a12c3a9992f.jpg")
+          no-repeat scroll 7px 7px;
+        background-size: 5%;
+        padding-left: 30px;
+        color: #000000;
+        font-size: large;
+        margin: auto;
+        margin-top: 2.5%;
+        background-color: #cccccc;
+      }
+
+      .input-icons1 {
+        background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSg0LD81PklvVRfPSdkkN6-JwUNgCmk2ZAsLoSKTajR6g&s")
+          no-repeat scroll 8px 8px;
+        background-size: 6.5%;
+        padding-left: 30px;
+        color: #000000;
+        font-size: large;
+        margin: auto;
+        background-color: #cccccc;
+      }
+
+      .input-icons3 {
+        margin: auto;
+        margin-top: 1.5%;
+      }
+
+      #signin {
+        background-color: #b45dbf;
+        margin: auto;
+        text-align: center;
+        color: #ffffff;
+        height: 30em;
+        background-image: url("https://media.istockphoto.com/id/1200781362/photo/abstract-textured-background-in-purple.jpg?s=612x612&w=0&k=20&c=rRUz4ATGIsYP2E7Z_T2joAzL_kPXqAOJ7YAugSwTao0=");
+        background-size: 100% 100%;
       }
     </style>
   </head>
@@ -709,16 +751,21 @@
         <a class="choose" href="">Exclusive Brands</a>
         <a class="choose" href="">Deals</a>
         <a class="choose" href="">Shop Local</a>
-
         <button class="icons">
-          <img class="iconImg" src="./icons/login.png" alt="" />
+          <a href="singIN.html">
+            <img class="iconImg" src="./icons/login.png" alt=""
+          /></a>
         </button>
 
         <button class="icons">
-          <img class="iconImg" src="./icons/reloading.png" alt="" />
+          <a href="index.html">
+            <img class="iconImg" src="./icons/reloading.png" alt=""
+          /></a>
         </button>
         <button class="icons">
-          <img class="iconImg" src="./icons/trolley.png" alt="" />
+          <a href="cart.html"
+            ><img class="iconImg" src="./icons/trolley.png" alt=""
+          /></a>
         </button>
       </div>
     </nav>
@@ -743,23 +790,13 @@
     <div id="banner"></div>
 
     <!-- Main Display -->
-    <div id="Main">
-      <select id="filter">
-        <option value="">Filter By Category</option>
-        <option value="Men">Men</option>
-        <option value="Women">Women</option>
-        <option value="Kids">Kids</option>
-      </select>
 
-      <select id="brandFilter">
-        <option value="">Filter By Brand</option>
-        <option value="Nike">Nike</option>
-        <option value="Adidas">Adidas</option>
-        <option value="Puma">Puma</option>
-        <option value="Woakers">Woakerss</option>
-      </select>
+    <h1 id="total">
+      Your Total cart Price is:- <span id="cart-total">0</span>
+    </h1>
+    <div id="cart-container">
+      <!-- Here Append All the cart Products  -->
 
-      <div id="product-container"></div>
       <!-- arrow -->
       <div id="arrowbtn">
         <img
@@ -806,86 +843,26 @@
       });
     });
 
-    //slideshow
-    let imgArray = [
-      "https://images-eu.ssl-images-amazon.com/images/G/31/img21/MA2022/Denim_Fest/Top-Acs-banner.gif",
-      "https://images-eu.ssl-images-amazon.com/images/G/31/img2020/fashion/WA_2020/BOTW19to25/02.jpg",
-      "https://images-eu.ssl-images-amazon.com/images/G/31/img21/MA2022/DEC_WRS22/P0/PC/brands/Coop/9-brands_with-images_37.jpg",
-      "https://images-eu.ssl-images-amazon.com/images/G/31/img21/MA2022/DEC_WRS22/P0/PC/brands/Coop/9-brands_with-images_23.jpg",
-      "https://images-eu.ssl-images-amazon.com/images/G/31/img21/MA2022/DEC_WRS22/P0/PC/brands/Coop/9-brands_with-images_25.jpg",
-    ];
-
-    let image = document.createElement("img");
-    let cont = document.getElementById("banner");
-    image.src = imgArray[1];
-    image.style.width = "100%";
-    image.style.height = "100%";
-    cont.appendChild(image);
-
-    let i = 0;
-    setInterval(() => {
-      image.setAttribute("src", imgArray[i]);
-      image.style.width = "100%";
-      image.style.height = "100%";
-      cont.append(image);
-      i++;
-      if (i > imgArray.length - 1) {
-        i = 0;
-      }
-    }, 5000);
-
     // Main Display
-    let container = document.getElementById("product-container");
-    let filterSelect = document.getElementById("filter");
-    let filterSelect2 = document.getElementById("brandFilter");
-    let fetchedData = [];
-    let fetchedData2 = [];
 
-    filterSelect.addEventListener("change", () => {
-      let filtered = fetchedData.filter((element) => {
-        if (element.description === filterSelect.value) {
-          return true;
-        } else {
-          return false;
-        }
-      });
-      displayProducts(filtered);
-    });
+    // cart
+    let container = document.getElementById("cart-container");
 
-    filterSelect2.addEventListener("change", () => {
-      let fil = fetchedData2.filter((element) => {
-        if (element.Brand == filterSelect2.value) {
-          return true;
-        } else {
-          return false;
-        }
-      });
-      console.log(fil);
-      displayProducts(fil);
-    });
+    let cartData = JSON.parse(localStorage.getItem("cart"));
+    if (cartData === null) {
+      cartData = [];
+    }
 
-    fetch("./clothing.json")
-      .then((responseObject) => {
-        return responseObject.json();
-      })
-      .then((acctualData) => {
-        fetchedData = acctualData;
-        fetchedData2 = acctualData;
-        displayProducts(acctualData);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+    displayProducts(cartData);
 
-    // data is going to be fetched data
     function displayProducts(data) {
       container.innerHTML = null;
 
       data.forEach((element) => {
         let card = document.createElement("div");
-        card.setAttribute("class", "displayMain");
-        let pic = document.createElement("img");
-        pic.setAttribute("src", element.image);
+
+        let image = document.createElement("img");
+        image.setAttribute("src", element.image);
 
         let brand = document.createElement("h2");
         brand.innerText = element.Brand;
@@ -899,32 +876,51 @@
         let category = document.createElement("p");
         category.innerText = element.category;
 
-        let addToCart = document.createElement("button");
-        addToCart.innerText = "Add To Cart";
+        let increment = document.createElement("button");
+        increment.innerText = "+";
 
-        addToCart.addEventListener("click", () => {
-          let cartData = JSON.parse(localStorage.getItem("cart"));
+        let quantity = document.createElement("span");
+        quantity.innerText = element.quantity;
 
-          if (cartData === null) cartData = [];
+        let decrement = document.createElement("button");
+        decrement.innerText = "-";
 
-          let isAdleadyInCart = false;
-          for (let i = 0; i < cartData.length; i++) {
-            if (cartData[i].id === element.id) {
-              isAdleadyInCart = true;
-              break;
+        let remove = document.createElement("button");
+        remove.innerText = "Remove";
+
+        let total = document.createElement("cart-total");
+
+        remove.addEventListener("click", () => {
+          cartData = cartData.filter((el, index) => {
+            if (index == i) {
+              return false;
+            } else {
+              return true;
             }
-          }
-
-          if (isAdleadyInCart === true) {
-            alert("Product Already in Cart");
-          } else {
-            cartData.push({ ...element, quantity: 1 });
-            localStorage.setItem("cart", JSON.stringify(cartData));
-            alert("Product Added To Cart");
-          }
+          });
+          displayProducts(cartData);
+        });
+        var i = 1;
+        increment.addEventListener("click", () => {
+          quantity.innerText = ++i;
         });
 
-        card.append(pic, brand, price, details, category, addToCart);
+        decrement.addEventListener("click", () => {
+          quantity.innerText = --i;
+        });
+
+        card.append(
+          image,
+          brand,
+          price,
+          details,
+          category,
+          increment,
+          quantity,
+          decrement,
+          remove,
+          total
+        );
         container.append(card);
       });
     }
