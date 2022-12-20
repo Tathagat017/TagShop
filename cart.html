@@ -685,6 +685,27 @@
         font-variant: small-caps;
         font-size: larger;
       }
+
+      #check {
+        text-align: center;
+      }
+      #check > button {
+        background-color: rgb(72, 14, 126);
+        color: white;
+        border-radius: 25px;
+        font-size: large;
+
+        transition: 0.2s;
+        cursor: pointer;
+      }
+
+      #check > button:hover {
+        background-color: tomato;
+      }
+
+      #check > input {
+        border-radius: 20px;
+      }
     </style>
   </head>
   <body>
@@ -827,6 +848,16 @@
     <h1 id="meraBill">
       The amount to pay in total is Rs <span id="bill-total">0</span>
     </h1>
+    <div id="check">
+      <input
+        type="text"
+        name=""
+        id="coupon"
+        value=""
+        placeholder="enter checkout coupon"
+      />
+      <button type="button" id="checkout">Checkout</button>
+    </div>
     <div id="cart-container">
       <!-- Here Append All the cart Products  -->
 
