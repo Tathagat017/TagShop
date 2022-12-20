@@ -1019,6 +1019,13 @@
       document.getElementById("nav").classList.toggle("change");
     });
 
+    let checkout = document.getElementById("checkout");
+
+    checkout.addEventListener("click", function () {
+      alert("Order Placed Succesfully");
+      refresh(2);
+      window.location.href = "index.html";
+    });
     function refresh(milliseconds) {
       console.log("Refreshing");
       setTimeout("location.reload(true);", milliseconds);
