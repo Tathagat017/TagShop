@@ -672,6 +672,19 @@
         background-image: url("https://media.istockphoto.com/id/1200781362/photo/abstract-textured-background-in-purple.jpg?s=612x612&w=0&k=20&c=rRUz4ATGIsYP2E7Z_T2joAzL_kPXqAOJ7YAugSwTao0=");
         background-size: 100% 100%;
       }
+
+      #meraBill {
+        text-align: center;
+        margin: 1%;
+        font-variant: small-caps;
+        font-size: large;
+      }
+
+      #total {
+        text-align: center;
+        font-variant: small-caps;
+        font-size: larger;
+      }
     </style>
   </head>
   <body>
@@ -811,7 +824,9 @@
     <h1 id="total">
       Your Total cart item quantity is :- <span id="cart-total">0</span>
     </h1>
-    <h1>The amount to pay in total is <span id="bill-total">0</span></h1>
+    <h1 id="meraBill">
+      The amount to pay in total is Rs <span id="bill-total">0</span>
+    </h1>
     <div id="cart-container">
       <!-- Here Append All the cart Products  -->
 
