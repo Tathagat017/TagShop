@@ -935,6 +935,7 @@
             }
           });
           localStorage.setItem("cart", JSON.stringify(favData));
+          window.location.reload();
           display(favData);
         });
 
@@ -984,5 +985,10 @@
       document.getElementById("menu").classList.toggle("icon");
       document.getElementById("nav").classList.toggle("change");
     });
+
+    function refresh(milliseconds) {
+      console.log("Refreshing");
+      setTimeout("location.reload(true);", milliseconds);
+    }
   </script>
 </html>
