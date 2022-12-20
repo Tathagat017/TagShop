@@ -987,17 +987,18 @@
         increment.addEventListener("click", () => {
           quantity.innerText++;
           element.quantity++;
-          cartData[index] = element;
-          localStorage.setItem("cart", JSON.stringify(cartData));
-          display(cartData);
+          favData[index] = element;
+          console.log(favData);
+          localStorage.setItem("cart", JSON.stringify(favData));
+          display(favData);
         });
         decrement.addEventListener("click", () => {
           if (element.quantity > 1) {
             quantity.innerText--;
             element.quantity--;
-            cartData[index] = element;
-            localStorage.setItem("cart", JSON.stringify(cartData));
-            display(cartData);
+            favData[index] = element;
+            localStorage.setItem("cart", JSON.stringify(favData));
+            display(favData);
           }
         });
 
