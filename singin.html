@@ -995,6 +995,9 @@
       isUser += authenticate(signData, loginData);
 
       heading.innerText = isUser;
+
+      form.email.value = "";
+      form.password.value = "";
     });
 
     function authenticate(signData, loginData) {

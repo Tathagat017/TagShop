@@ -556,11 +556,26 @@
         }
       }
 
-      #product-container {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
+      #cart-container {
+        display: block;
+        grid-template-columns: repeat(auto, 1fr);
+        grid-auto-rows: auto;
+        gap: 30px;
+        text-align: center;
+      }
+      #cart-container > div {
+        margin: 10px;
+      }
 
-        gap: 22px;
+      #cart-container > div button {
+        margin: 1%;
+        width: 10%;
+        height: 2em;
+        border-radius: 15px;
+      }
+
+      #cart-container > div > img {
+        width: 30%;
       }
 
       .displayMain {
@@ -792,7 +807,7 @@
     <!-- Main Display -->
 
     <h1 id="total">
-      Your Total cart Price is:- <span id="cart-total">0</span>
+      Your Total cart item quantity is :- <span id="cart-total">0</span>
     </h1>
     <div id="cart-container">
       <!-- Here Append All the cart Products  -->
@@ -916,6 +931,12 @@
           }
         });
 
+        let totalBill = 0;
+        totalBill += element.price * element.quantity;
+
+        let total = document.createElement("h2");
+        total.innerText = totalBill;
+
         card.append(
           image,
           name,
@@ -925,7 +946,8 @@
           quantity,
           increment,
           Delete,
-          decrement
+          decrement,
+          total
         );
         container.append(card);
       });

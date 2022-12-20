@@ -1012,6 +1012,9 @@
       signData.push(user);
 
       localStorage.setItem("account-data", JSON.stringify(signData));
+      form.name.value = "";
+      email: form.email.value = "";
+      password: form.password.value;
     });
 
     // Menu Hamburger
@@ -1021,5 +1024,7 @@
       document.getElementById("menu").classList.toggle("icon");
       document.getElementById("nav").classList.toggle("change");
     });
+
+    // reload
   </script>
 </html>
