@@ -809,6 +809,7 @@
     <h1 id="total">
       Your Total cart item quantity is :- <span id="cart-total">0</span>
     </h1>
+    <h1>The amount to pay in total is <span id="bill-total">0</span></h1>
     <div id="cart-container">
       <!-- Here Append All the cart Products  -->
 
@@ -863,11 +864,17 @@
     // cart
     let container = document.getElementById("cart-container");
     let total = document.getElementById("cart-total");
+
     let favData = JSON.parse(localStorage.getItem("cart"));
     if (favData == null) {
       favData = [];
     }
-
+    let biller = document.getElementById("bill-total");
+    let billerA = 0;
+    let n = favData.forEach((em) => {
+      billerA += em.price * em.quantity;
+    });
+    biller.textContent = billerA;
     display(favData);
     function display(data) {
       let totalCount = favData.length;
@@ -934,8 +941,8 @@
         let totalBill = 0;
         totalBill += element.price * element.quantity;
 
-        let total = document.createElement("h2");
-        total.innerText = totalBill;
+        let totalT = document.createElement("p");
+        totalT.innerText = "This item adds $ " + totalBill;
 
         card.append(
           image,
@@ -947,7 +954,7 @@
           increment,
           Delete,
           decrement,
-          total
+          totalT
         );
         container.append(card);
       });
