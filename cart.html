@@ -575,7 +575,7 @@
       }
 
       #cart-container > div > img {
-        width: 30%;
+        width: 20%;
       }
 
       .displayMain {
@@ -990,6 +990,7 @@
           favData[index] = element;
           console.log(favData);
           localStorage.setItem("cart", JSON.stringify(favData));
+          window.location.reload();
           display(favData);
         });
         decrement.addEventListener("click", () => {
@@ -998,6 +999,7 @@
             element.quantity--;
             favData[index] = element;
             localStorage.setItem("cart", JSON.stringify(favData));
+            window.location.reload();
             display(favData);
           }
         });
