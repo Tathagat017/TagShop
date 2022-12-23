@@ -712,6 +712,42 @@
       .footer a:hover {
         color: tomato;
       }
+
+      .real {
+        display: block;
+        margin: auto;
+      }
+      .displayMain {
+        width: 30%;
+        height: 80%;
+        border: 1px solid black;
+        text-align: center;
+        font-variant: small-caps;
+        word-spacing: 2%;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        line-height: 130%;
+        margin: auto;
+      }
+      .displayMain > img {
+        width: 95%;
+        height: 50%;
+      }
+      .displayMain > button {
+        background-color: rgb(72, 14, 126);
+        color: white;
+        border-radius: 25px;
+        font-size: large;
+
+        transition: 0.2s;
+        cursor: pointer;
+      }
+      .displayMain > button:hover {
+        background-color: tomato;
+      }
+      #Main {
+        margin: 2%;
+        text-align: center;
+      }
     </style>
   </head>
   <body>
@@ -796,7 +832,7 @@
             type="text"
             id="search"
             value=""
-            placeholder="search the entire shop"
+            placeholder="search  by brands"
           />
           <button type="button" id="search-btn">
             <span class="material-icons"> search </span>
@@ -852,280 +888,284 @@
     </div>
     <!-- banner -->
 
-    <a href="clothing.html"><div id="banner"></div></a>
+    <div id="product-container">
+      <a href="clothing.html"><div id="banner"></div></a>
 
-    <!-- banner2 -->
-    <div id="banner2">
-      <div class="cardb2">
-        <h3>Recently Viewed</h3>
-        <img
-          src="https://img.shop.com/Image/250000/259800/259815/products/1302874130.jpg?plain&size=300x300"
-          alt=""
-        />
-        <a href="">Show more</a>
-      </div>
-      <div class="cardb2">
-        <h3>Your Favorite Departments</h3>
-        <img
-          src="https://img.shop.com/Image/departments/Health%20&%20Nutrition.jpg"
-          alt=""
-        />
-        <a href="">Health and Nutrition</a>
-      </div>
-      <div class="cardb2-1">
-        <h3>Featured One Cart Stores</h3>
-        <img
-          src="https://img.shop.com/Image/topbrands/nmlogos_136706.gif"
-          alt=""
-        />
-        <img
-          src="https://img.shop.com/Image/topbrands/nmlogos_134047.gif"
-          alt=""
-        />
-        <img
-          src="https://img.shop.com/Image/topbrands/nmlogos_108567.gif"
-          alt=""
-        />
-        <img
-          src="https://img.shop.com/Image/topbrands/nmlogos_113138.gif"
-          alt=""
-        />
-        <a href="">See More Stores</a>
-      </div>
-      <div class="cardb2">
-        <div id="extraSign">
-          <h4>For better experience</h4>
-          <a href="singin.html"
-            ><button id="extraSignIn">
-              Sign up/Login
-              <img src="./icons/user-login-security-11951.png" alt="" /></button
-          ></a>
+      <!-- banner2 -->
+      <div id="banner2">
+        <div class="cardb2">
+          <h3>Recently Viewed</h3>
+          <img
+            src="https://img.shop.com/Image/250000/259800/259815/products/1302874130.jpg?plain&size=300x300"
+            alt=""
+          />
+          <a href="">Show more</a>
         </div>
-        <img
-          src="https://img.shop.com/Image/homepage/stocking-stuffers-media-300x250-img1669837197571.jpg"
-          alt=""
-        />
-      </div>
-    </div>
-
-    <!-- popular brands 1 -->
-    <h2 id="popularHeading1">Branded Store : Sneakers</h2>
-    <div id="popular1">
-      <div class="brandcards">
-        <a href="Shoes.html"
-          ><img src="./landing/brands1/adidaslogo_140_1100.jpg" alt=""
-        /></a>
-      </div>
-      <div class="brandcards">
-        <a href="Shoes.html">
-          <img src="./landing/brands1/coach_brand7.jpg" alt=""
-        /></a>
-      </div>
-      <div class="brandcards">
-        <a href="Shoes.html">
-          <img src="./landing/brands1/cuisinart.gif" alt=""
-        /></a>
-      </div>
-      <div class="brandcards">
-        <a href="Shoes.html">
-          <img src="./landing/brands1/michaelkors_140x110-img.gif" alt=""
-        /></a>
-      </div>
-      <div class="brandcards">
-        <a href="Shoes.html">
-          <img src="./landing/brands1/nike_140x110-img.gif" alt=""
-        /></a>
-      </div>
-    </div>
-
-    <!-- Banner - four cards -->
-    <div id="banner4">
-      <div class="banner4C">
-        <img
-          src="./landing/banner4/us-eng-jcpenney-50p-hp-nov221669752610403.jpeg"
-          alt=""
-        />
-        <h3>2.00 %</h3>
-        <img
-          class="cashback-logo"
-          src="./logo/tagshop-high-resolution-color-logo.png"
-          alt=""
-        />
-        <h3>Cashback</h3>
-        <p>JC Penney Up to 50% Off</p>
-      </div>
-      <div class="banner4C">
-        <img
-          src="./landing/banner4/us-eng-macys-hp-media-dec221670950239639.jpeg"
-          alt=""
-        />
-        <h3>2.00 %</h3>
-        <img
-          class="cashback-logo"
-          src="./logo/tagshop-high-resolution-color-logo.png"
-          alt=""
-        />
-        <h3>Cashback</h3>
-        <p>Up to 50% off Last Minute Gifting</p>
-      </div>
-      <div class="banner4C">
-        <img
-          src="./landing/banner4/us-eng-nike-hp-dec221670866755445.jpeg"
-          alt=""
-        />
-        <h3>2.00 %</h3>
-        <img
-          class="cashback-logo"
-          src="./logo/tagshop-high-resolution-color-logo.png"
-          alt=""
-        />
-        <h3>Cashback</h3>
-        <p>Up to 50% off Last Minute Gifting</p>
-      </div>
-      <div class="banner4C">
-        <img
-          src="./landing/banner4/us-eng-oldnavy-ny-media-fillin-jan221671030969812.jpg"
-          alt=""
-        />
-        <h3>2.00 %</h3>
-        <img
-          class="cashback-logo"
-          src="./logo/tagshop-high-resolution-color-logo.png"
-          alt=""
-        />
-        <h3>Cashback</h3>
-        <p>40% Off Your Purchase!.</p>
-      </div>
-    </div>
-
-    <!-- Fifa Worldcup -->
-    <div id="fifagif">
-      <a href="Shoes.html">
-        <img
-          src="./landing/banner5/web-FIFA-Strip-Web-15112022.gif"
-          height="300px"
-          width="100%"
-        />
-      </a>
-    </div>
-
-    <!-- carousel fifa -->
-
-    <div id="carousel">
-      <button id="next">
-        <img src="./landing/caraousel/button/prev.png" alt="" />
-      </button>
-      <a href="clothing.html"><div id="carImage"></div></a>
-      <button id="previous">
-        <img src="./landing/caraousel/button/next.jpg" alt="" />
-      </button>
-    </div>
-
-    <!-- popular brands2 -->
-    <h2 id="popularHeading2">Branded Store : Clothing</h2>
-    <div id="popular2">
-      <div>
-        <a href="clothing.html"
-          ><img
-            src="./landing/brands2/allen-solly_6-Widgets_sbxchgscjscjfsjc_8676757576.webp"
-            alt=""
-        /></a>
-      </div>
-      <div>
-        <a href="clothing.html">
+        <div class="cardb2">
+          <h3>Your Favorite Departments</h3>
           <img
-            src="./landing/brands2/celio_6-Widgets_6744fhhaabnx_88211.webp"
+            src="https://img.shop.com/Image/departments/Health%20&%20Nutrition.jpg"
             alt=""
-        /></a>
-      </div>
-      <div>
-        <a href="clothing.html"
-          ><img src="./landing/brands2/nautica_6-Widgets.webp" alt=""
-        /></a>
-      </div>
-      <div>
-        <a href="clothing.html">
+          />
+          <a href="">Health and Nutrition</a>
+        </div>
+        <div class="cardb2-1">
+          <h3>Featured One Cart Stores</h3>
           <img
-            src="./landing/brands2/pepe-jeans_6-Widgets_nbwwvbaaaa_89897yhjjww.webp"
+            src="https://img.shop.com/Image/topbrands/nmlogos_136706.gif"
             alt=""
-        /></a>
-      </div>
-      <div>
-        <a href="clothing.html"
-          ><img
-            src="./landing/brands2/van-heusen_6-Widgets_6663333_yuhjhjabnqqqmnjss.webp"
+          />
+          <img
+            src="https://img.shop.com/Image/topbrands/nmlogos_134047.gif"
             alt=""
-        /></a>
+          />
+          <img
+            src="https://img.shop.com/Image/topbrands/nmlogos_108567.gif"
+            alt=""
+          />
+          <img
+            src="https://img.shop.com/Image/topbrands/nmlogos_113138.gif"
+            alt=""
+          />
+          <a href="">See More Stores</a>
+        </div>
+        <div class="cardb2">
+          <div id="extraSign">
+            <h4>For better experience</h4>
+            <a href="singin.html"
+              ><button id="extraSignIn">
+                Sign up/Login
+                <img
+                  src="./icons/user-login-security-11951.png"
+                  alt=""
+                /></button
+            ></a>
+          </div>
+          <img
+            src="https://img.shop.com/Image/homepage/stocking-stuffers-media-300x250-img1669837197571.jpg"
+            alt=""
+          />
+        </div>
       </div>
-      <div>
-        <a href="clothing.html">
-          <img src="./landing/brands2/tyhj.webp" alt=""
-        /></a>
+
+      <!-- popular brands 1 -->
+      <h2 id="popularHeading1">Branded Store : Sneakers</h2>
+      <div id="popular1">
+        <div class="brandcards">
+          <a href="Shoes.html"
+            ><img src="./landing/brands1/adidaslogo_140_1100.jpg" alt=""
+          /></a>
+        </div>
+        <div class="brandcards">
+          <a href="Shoes.html">
+            <img src="./landing/brands1/coach_brand7.jpg" alt=""
+          /></a>
+        </div>
+        <div class="brandcards">
+          <a href="Shoes.html">
+            <img src="./landing/brands1/cuisinart.gif" alt=""
+          /></a>
+        </div>
+        <div class="brandcards">
+          <a href="Shoes.html">
+            <img src="./landing/brands1/michaelkors_140x110-img.gif" alt=""
+          /></a>
+        </div>
+        <div class="brandcards">
+          <a href="Shoes.html">
+            <img src="./landing/brands1/nike_140x110-img.gif" alt=""
+          /></a>
+        </div>
+      </div>
+
+      <!-- Banner - four cards -->
+      <div id="banner4">
+        <div class="banner4C">
+          <img
+            src="./landing/banner4/us-eng-jcpenney-50p-hp-nov221669752610403.jpeg"
+            alt=""
+          />
+          <h3>2.00 %</h3>
+          <img
+            class="cashback-logo"
+            src="./logo/tagshop-high-resolution-color-logo.png"
+            alt=""
+          />
+          <h3>Cashback</h3>
+          <p>JC Penney Up to 50% Off</p>
+        </div>
+        <div class="banner4C">
+          <img
+            src="./landing/banner4/us-eng-macys-hp-media-dec221670950239639.jpeg"
+            alt=""
+          />
+          <h3>2.00 %</h3>
+          <img
+            class="cashback-logo"
+            src="./logo/tagshop-high-resolution-color-logo.png"
+            alt=""
+          />
+          <h3>Cashback</h3>
+          <p>Up to 50% off Last Minute Gifting</p>
+        </div>
+        <div class="banner4C">
+          <img
+            src="./landing/banner4/us-eng-nike-hp-dec221670866755445.jpeg"
+            alt=""
+          />
+          <h3>2.00 %</h3>
+          <img
+            class="cashback-logo"
+            src="./logo/tagshop-high-resolution-color-logo.png"
+            alt=""
+          />
+          <h3>Cashback</h3>
+          <p>Up to 50% off Last Minute Gifting</p>
+        </div>
+        <div class="banner4C">
+          <img
+            src="./landing/banner4/us-eng-oldnavy-ny-media-fillin-jan221671030969812.jpg"
+            alt=""
+          />
+          <h3>2.00 %</h3>
+          <img
+            class="cashback-logo"
+            src="./logo/tagshop-high-resolution-color-logo.png"
+            alt=""
+          />
+          <h3>Cashback</h3>
+          <p>40% Off Your Purchase!.</p>
+        </div>
+      </div>
+
+      <!-- Fifa Worldcup -->
+      <div id="fifagif">
+        <a href="Shoes.html">
+          <img
+            src="./landing/banner5/web-FIFA-Strip-Web-15112022.gif"
+            height="300px"
+            width="100%"
+          />
+        </a>
+      </div>
+
+      <!-- carousel fifa -->
+
+      <div id="carousel">
+        <button id="next">
+          <img src="./landing/caraousel/button/prev.png" alt="" />
+        </button>
+        <a href="clothing.html"><div id="carImage"></div></a>
+        <button id="previous">
+          <img src="./landing/caraousel/button/next.jpg" alt="" />
+        </button>
+      </div>
+
+      <!-- popular brands2 -->
+      <h2 id="popularHeading2">Branded Store : Clothing</h2>
+      <div id="popular2">
+        <div>
+          <a href="clothing.html"
+            ><img
+              src="./landing/brands2/allen-solly_6-Widgets_sbxchgscjscjfsjc_8676757576.webp"
+              alt=""
+          /></a>
+        </div>
+        <div>
+          <a href="clothing.html">
+            <img
+              src="./landing/brands2/celio_6-Widgets_6744fhhaabnx_88211.webp"
+              alt=""
+          /></a>
+        </div>
+        <div>
+          <a href="clothing.html"
+            ><img src="./landing/brands2/nautica_6-Widgets.webp" alt=""
+          /></a>
+        </div>
+        <div>
+          <a href="clothing.html">
+            <img
+              src="./landing/brands2/pepe-jeans_6-Widgets_nbwwvbaaaa_89897yhjjww.webp"
+              alt=""
+          /></a>
+        </div>
+        <div>
+          <a href="clothing.html"
+            ><img
+              src="./landing/brands2/van-heusen_6-Widgets_6663333_yuhjhjabnqqqmnjss.webp"
+              alt=""
+          /></a>
+        </div>
+        <div>
+          <a href="clothing.html">
+            <img src="./landing/brands2/tyhj.webp" alt=""
+          /></a>
+        </div>
+      </div>
+
+      <!-- next 4 divs -->
+
+      <!-- Banner - four cards -->
+      <div id="banner4">
+        <div class="banner4C">
+          <img
+            src="https://img.shop.com/Image/homepage/us-eng-bbb-memorialday-media-may211670870263691.jpg"
+            alt=""
+          />
+          <h3>2.00 %</h3>
+          <img
+            class="cashback-logo"
+            src="./logo/tagshop-high-resolution-color-logo.png"
+            alt=""
+          />
+          <h3>Cashback</h3>
+          <p>JC Penney Up to 50% Off</p>
+        </div>
+        <div class="banner4C">
+          <img
+            src="https://img.shop.com/Image/homepage/us-eng-michaelkors-hp-media-oct20221670967949815.jpeg"
+            alt=""
+          />
+          <h3>2.00 %</h3>
+          <img
+            class="cashback-logo"
+            src="./logo/tagshop-high-resolution-color-logo.png"
+            alt=""
+          />
+          <h3>Cashback</h3>
+          <p>Up to 50% off Last Minute Gifting</p>
+        </div>
+        <div class="banner4C">
+          <img
+            src="https://img.shop.com/Image/homepage/us-eng-oerstock-hp-media-dec221670968240105.png"
+            alt=""
+          />
+          <h3>2.00 %</h3>
+          <img
+            class="cashback-logo"
+            src="./logo/tagshop-high-resolution-color-logo.png"
+            alt=""
+          />
+          <h3>Cashback</h3>
+          <p>Up to 50% off Last Minute Gifting</p>
+        </div>
+        <div class="banner4C">
+          <img
+            src="https://img.shop.com/Image/homepage/shop-en-us-Marshalls-FreeShip-300x2501668727246227-img.jpg"
+            alt=""
+          />
+          <h3>2.00 %</h3>
+          <img
+            class="cashback-logo"
+            src="./logo/tagshop-high-resolution-color-logo.png"
+            alt=""
+          />
+          <h3>Cashback</h3>
+          <p>40% Off Your Purchase!.</p>
+        </div>
       </div>
     </div>
-
-    <!-- next 4 divs -->
-
-    <!-- Banner - four cards -->
-    <div id="banner4">
-      <div class="banner4C">
-        <img
-          src="https://img.shop.com/Image/homepage/us-eng-bbb-memorialday-media-may211670870263691.jpg"
-          alt=""
-        />
-        <h3>2.00 %</h3>
-        <img
-          class="cashback-logo"
-          src="./logo/tagshop-high-resolution-color-logo.png"
-          alt=""
-        />
-        <h3>Cashback</h3>
-        <p>JC Penney Up to 50% Off</p>
-      </div>
-      <div class="banner4C">
-        <img
-          src="https://img.shop.com/Image/homepage/us-eng-michaelkors-hp-media-oct20221670967949815.jpeg"
-          alt=""
-        />
-        <h3>2.00 %</h3>
-        <img
-          class="cashback-logo"
-          src="./logo/tagshop-high-resolution-color-logo.png"
-          alt=""
-        />
-        <h3>Cashback</h3>
-        <p>Up to 50% off Last Minute Gifting</p>
-      </div>
-      <div class="banner4C">
-        <img
-          src="https://img.shop.com/Image/homepage/us-eng-oerstock-hp-media-dec221670968240105.png"
-          alt=""
-        />
-        <h3>2.00 %</h3>
-        <img
-          class="cashback-logo"
-          src="./logo/tagshop-high-resolution-color-logo.png"
-          alt=""
-        />
-        <h3>Cashback</h3>
-        <p>Up to 50% off Last Minute Gifting</p>
-      </div>
-      <div class="banner4C">
-        <img
-          src="https://img.shop.com/Image/homepage/shop-en-us-Marshalls-FreeShip-300x2501668727246227-img.jpg"
-          alt=""
-        />
-        <h3>2.00 %</h3>
-        <img
-          class="cashback-logo"
-          src="./logo/tagshop-high-resolution-color-logo.png"
-          alt=""
-        />
-        <h3>Cashback</h3>
-        <p>40% Off Your Purchase!.</p>
-      </div>
-    </div>
-
     <!-- arrow -->
     <div id="arrowbtn">
       <img
@@ -1286,5 +1326,90 @@
       document.getElementById("menu").classList.toggle("icon");
       document.getElementById("nav").classList.toggle("change");
     });
+
+    let container = document.getElementById("product-container");
+    let filterSelect = document.getElementById("filter");
+    let filterSelect2 = document.getElementById("brandFilter");
+    let fetchedData = [];
+    let fetchedData2 = [];
+
+    let m = document.getElementById("search").addEventListener("input", (f) => {
+      fetch("./all.json")
+        .then((responseObject) => {
+          return responseObject.json();
+        })
+        .then((acctualData) => {
+          fetchedData = acctualData;
+          fetchedData2 = acctualData;
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+      let input1 = f.target.value;
+      console.log(input1);
+      let searced = fetchedData2.filter((el, index) => {
+        if (el.Brand.toLowerCase().includes(input1.toLowerCase())) {
+          return true;
+        }
+      });
+
+      displayProducts(searced);
+    });
+    // data is going to be fetched data
+
+    function displayProducts(data) {
+      container.innerHTML = null;
+
+      data.forEach((element) => {
+        let card = document.createElement("div");
+        card.setAttribute("class", "displayMain");
+        let pic = document.createElement("img");
+        pic.setAttribute("src", element.image);
+
+        let brand = document.createElement("h2");
+        brand.innerText = element.Brand;
+
+        let price = document.createElement("h3");
+        price.innerText = element.price;
+
+        let details = document.createElement("p");
+        details.innerText = element.description;
+
+        let category = document.createElement("p");
+        category.innerText = element.category;
+
+        let addToCart = document.createElement("button");
+        addToCart.innerText = "Add To Cart";
+
+        addToCart.addEventListener("click", () => {
+          let cartData = JSON.parse(localStorage.getItem("cart"));
+
+          if (cartData === null) cartData = [];
+
+          let isAdleadyInCart = false;
+          for (let i = 0; i < cartData.length; i++) {
+            if (cartData[i].id === element.id) {
+              isAdleadyInCart = true;
+              break;
+            }
+          }
+
+          if (isAdleadyInCart === true) {
+            alert("Product ALREADY in Cart");
+          } else {
+            cartData.push({ ...element, quantity: 1 });
+            localStorage.setItem("cart", JSON.stringify(cartData));
+            alert("Product ADDED To Cart");
+          }
+        });
+
+        card.append(pic, brand, price, details, category, addToCart);
+        let real = document.createElement("div");
+        real.setAttribute("class", "real");
+        real.style.display = "grid";
+        real.append(card);
+        container.append(real);
+      });
+    }
   </script>
 </html>

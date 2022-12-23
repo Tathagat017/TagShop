@@ -1,0 +1,613 @@
+[
+  {
+    "id": 1,
+    "Brand": "Arrow",
+    "price": 109.95,
+    "description": "Men",
+    "category": "Clothing",
+    "image": "https://m.media-amazon.com/images/I/81b-2ZVYpjL._AC_UL480_FMwebp_QL65_.jpg",
+    "rating": {
+      "rate": 3,
+      "count": 120
+    }
+  },
+  {
+    "id": 2,
+    "Brand": "Puma",
+    "price": 22.3,
+    "description": "Men",
+    "category": "Clothing",
+    "image": "https://m.media-amazon.com/images/I/61eMJalktNL._AC_UL480_FMwebp_QL65_.jpg",
+    "rating": {
+      "rate": 4.1,
+      "count": 259
+    }
+  },
+  {
+    "id": 3,
+    "Brand": "Puma",
+    "price": 55.99,
+    "description": "Men",
+    "category": "Clothing",
+    "image": "https://m.media-amazon.com/images/I/61mqx2-CJdL._AC_UL480_FMwebp_QL65_.jpg",
+    "rating": {
+      "rate": 4.7,
+      "count": 500
+    }
+  },
+  {
+    "id": 4,
+    "Brand": "Puma",
+    "price": 15.99,
+    "description": "Men",
+    "category": "Clothing",
+    "image": "https://m.media-amazon.com/images/I/61Dzm1VHR+L._AC_UL480_FMwebp_QL65_.jpg",
+    "rating": {
+      "rate": 2.1,
+      "count": 430
+    }
+  },
+  {
+    "id": 5,
+    "Brand": "Nike",
+    "price": 695,
+    "description": "Men",
+    "category": "Clothing",
+    "image": "https://m.media-amazon.com/images/I/61rqUsD3q1L._AC_UL480_FMwebp_QL65_.jpg",
+    "rating": {
+      "rate": 4.6,
+      "count": 400
+    }
+  },
+  {
+    "id": 6,
+    "Brand": "Nike",
+    "price": 168,
+    "description": "Women",
+    "image": "https://m.media-amazon.com/images/I/81zhLz7cgmL._AC_UL480_FMwebp_QL65_.jpg",
+    "category": "Clothing",
+    "rating": {
+      "rate": 3.9,
+      "count": 70
+    }
+  },
+  {
+    "id": 7,
+    "Brand": "Adidas",
+    "price": 9.99,
+    "description": "Women",
+    "category": "Clothing",
+    "image": "https://m.media-amazon.com/images/I/51KIh3tpsRL._AC_UL480_FMwebp_QL65_.jpg",
+    "rating": {
+      "rate": 3,
+      "count": 400
+    }
+  },
+  {
+    "id": 8,
+    "Brand": "Adidas",
+    "price": 10.99,
+    "description": "Women",
+    "category": "Clothing",
+    "image": "https://m.media-amazon.com/images/I/71df8cAgplL._AC_UL480_FMwebp_QL65_.jpg",
+    "rating": {
+      "rate": 1.9,
+      "count": 100
+    }
+  },
+  {
+    "id": 9,
+    "Brand": "Coach",
+    "price": 64,
+    "description": "Women",
+    "category": "Clothing",
+    "image": "https://m.media-amazon.com/images/I/81XRIAmBt+L._AC_UL480_FMwebp_QL65_.jpg",
+    "rating": {
+      "rate": 3.3,
+      "count": 203
+    }
+  },
+  {
+    "id": 10,
+    "Brand": "Arrow",
+    "price": 109,
+    "description": "Women",
+    "category": "Clothing",
+    "image": "https://m.media-amazon.com/images/I/81PmdRAa9ZS._AC_UL480_FMwebp_QL65_.jpg",
+    "rating": {
+      "rate": 2.9,
+      "count": 470
+    }
+  },
+  {
+    "id": 11,
+    "Brand": "Wrangler",
+    "price": 109,
+    "description": "Kids",
+    "category": "Clothing",
+    "image": "https://m.media-amazon.com/images/I/91i5jVdgOWL._AC_UL480_FMwebp_QL65_.jpg",
+    "rating": {
+      "rate": 4.8,
+      "count": 319
+    }
+  },
+  {
+    "id": 12,
+    "Brand": "Michael Kors",
+    "price": 114,
+    "description": "Men",
+    "category": "Clothing",
+    "image": "https://m.media-amazon.com/images/I/81MEk4n9BXL._AC_UL480_FMwebp_QL65_.jpg",
+    "rating": {
+      "rate": 4.8,
+      "count": 400
+    }
+  },
+  {
+    "id": 13,
+    "Brand": "Wrangler",
+    "price": 599,
+    "description": "Men",
+    "category": "Clothing",
+    "image": "https://m.media-amazon.com/images/I/61pCn6DowvS._AC_UL480_FMwebp_QL65_.jpg",
+    "rating": {
+      "rate": 2.9,
+      "count": 250
+    }
+  },
+  {
+    "id": 14,
+    "Brand": "Allen Solly",
+    "price": 999.99,
+    "description": "Men",
+    "category": "Clothing",
+    "image": "https://m.media-amazon.com/images/I/61df4EyP-JL._AC_UL480_FMwebp_QL65_.jpg",
+    "rating": {
+      "rate": 2.2,
+      "count": 140
+    }
+  },
+  {
+    "id": 15,
+    "Brand": "Allen Solly",
+    "price": 56.99,
+    "description": "Men",
+    "category": "Clothing",
+    "image": "https://m.media-amazon.com/images/I/71LSdE6KaXL._AC_UL480_FMwebp_QL65_.jpg",
+    "rating": {
+      "rate": 2.6,
+      "count": 235
+    }
+  },
+  {
+    "id": 16,
+    "Brand": "Levi's",
+    "price": 29.95,
+    "description": "Men",
+    "category": "Clothing",
+    "image": "https://m.media-amazon.com/images/I/61yx9yDKzZL._AC_UL480_FMwebp_QL65_.jpg",
+    "rating": {
+      "rate": 2.9,
+      "count": 340
+    }
+  },
+  {
+    "id": 17,
+    "Brand": "Arrow",
+    "price": 39.99,
+    "description": "Kids",
+    "category": "Clothing",
+    "image": "https://m.media-amazon.com/images/I/91Ubx1rVL5L._AC_UL480_FMwebp_QL65_.jpg",
+    "rating": {
+      "rate": 3.8,
+      "count": 679
+    }
+  },
+  {
+    "id": 18,
+    "Brand": "Nike",
+    "price": 9.85,
+    "description": "Men",
+    "category": "Clothing",
+    "image": "https://m.media-amazon.com/images/I/71-Jz5FRWyL._AC_UL480_FMwebp_QL65_.jpg",
+    "rating": {
+      "rate": 4.7,
+      "count": 130
+    }
+  },
+  {
+    "id": 19,
+    "Brand": "Nike",
+    "price": 7.95,
+    "description": "Men",
+    "category": "Clothing",
+    "image": "https://m.media-amazon.com/images/I/71TAnwqwLDL._AC_UL480_FMwebp_QL65_.jpg",
+    "rating": {
+      "rate": 4.5,
+      "count": 146
+    }
+  },
+  {
+    "id": 20,
+    "Brand": "Adidas",
+    "price": 12.99,
+    "description": "Kids",
+    "category": "Clothing",
+    "image": "https://m.media-amazon.com/images/I/91Ubx1rVL5L._AC_UL480_FMwebp_QL65_.jpg",
+    "rating": {
+      "rate": 3.6,
+      "count": 145
+    }
+  },
+  {
+    "id": 21,
+    "Brand": "WD ",
+    "price": 64,
+    "description": "Hardisk",
+    "category": "electronics",
+    "image": "https://fakestoreapi.com/img/61IBBVJvSDL._AC_SY879_.jpg",
+    "rating": {
+      "rate": 3.3,
+      "count": 203
+    }
+  },
+  {
+    "id": 22,
+    "Brand": "Lenovo",
+    "price": 64,
+    "description": "Laptop",
+    "category": "electronics",
+    "image": "https://m.media-amazon.com/images/I/71--IQUHVwL._AC_UY327_FMwebp_QL65_.jpg",
+    "rating": {
+      "rate": 3.3,
+      "count": 203
+    }
+  },
+  {
+    "id": 23,
+    "Brand": "Dell",
+    "price": 64,
+    "description": "Laptop",
+    "category": "electronics",
+    "image": "https://m.media-amazon.com/images/I/61Dw5Z8LzJL._AC_UY327_FMwebp_QL65_.jpg",
+    "rating": {
+      "rate": 3.3,
+      "count": 203
+    }
+  },
+  {
+    "id": 24,
+    "Brand": "SanDisk",
+    "price": 109,
+    "description": "Hardisk",
+    "category": "electronics",
+    "image": "https://fakestoreapi.com/img/61U7T1koQqL._AC_SX679_.jpg",
+    "rating": {
+      "rate": 2.9,
+      "count": 470
+    }
+  },
+  {
+    "id": 25,
+    "Brand": "HP",
+    "price": 109,
+    "description": "Hardisk",
+    "category": "electronics",
+    "image": "https://fakestoreapi.com/img/71kWymZ+c+L._AC_SX679_.jpg",
+    "rating": {
+      "rate": 4.8,
+      "count": 319
+    }
+  },
+  {
+    "id": 26,
+    "Brand": "WD",
+    "price": 114,
+    "description": "Hardisk",
+    "category": "electronics",
+    "image": "https://fakestoreapi.com/img/61mtL65D4cL._AC_SX679_.jpg",
+    "rating": {
+      "rate": 4.8,
+      "count": 400
+    }
+  },
+  {
+    "id": 27,
+    "Brand": "Acer",
+    "price": 599,
+    "description": "Monitor",
+    "category": "electronics",
+    "image": "https://fakestoreapi.com/img/81QpkIctqPL._AC_SX679_.jpg",
+    "rating": {
+      "rate": 2.9,
+      "count": 250
+    }
+  },
+  {
+    "id": 28,
+    "Brand": "Samsung",
+    "price": 999.99,
+    "description": "Monitor",
+    "category": "electronics",
+    "image": "https://fakestoreapi.com/img/81Zt42ioCgL._AC_SX679_.jpg",
+    "rating": {
+      "rate": 2.2,
+      "count": 140
+    }
+  },
+  {
+    "id": 29,
+    "Brand": "Samsung",
+    "price": 99.99,
+    "description": "Speaker",
+    "category": "electronics",
+    "image": "https://m.media-amazon.com/images/I/61y95b9xsGL._AC_UY327_FMwebp_QL65_.jpg",
+    "rating": {
+      "rate": 2.2,
+      "count": 140
+    }
+  },
+  {
+    "id": 30,
+    "Brand": "Boat",
+    "price": 9.99,
+    "description": "Speaker",
+    "category": "electronics",
+    "image": "https://m.media-amazon.com/images/I/81U3kN9bf1L._AC_UY327_FMwebp_QL65_.jpg",
+    "rating": {
+      "rate": 2.2,
+      "count": 140
+    }
+  },
+  {
+    "id": 31,
+    "Brand": "Boat",
+    "price": 9.99,
+    "description": "Speaker",
+    "category": "electronics",
+    "image": "https://m.media-amazon.com/images/I/71vI6nfLtYL._AC_UY327_FMwebp_QL65_.jpg",
+    "rating": {
+      "rate": 2.2,
+      "count": 140
+    }
+  },
+  {
+    "id": 32,
+    "Brand": "Woakers",
+    "price": 109.95,
+    "description": "Men",
+    "category": "Shoes",
+    "image": "https://sslimages.shoppersstop.com/sys-master/images/h05/hcd/28346841268254/WK526BLACK_BLACK.jpg_230Wx334H",
+    "rating": {
+      "rate": 3,
+      "count": 120
+    }
+  },
+  {
+    "id": 33,
+    "Brand": "Puma",
+    "price": 22.3,
+    "description": "Men",
+    "category": "Shoes",
+    "image": "https://m.media-amazon.com/images/I/41lARSPWRZL._AC_UF226,226_FMjpg_.jpg",
+    "rating": {
+      "rate": 4.1,
+      "count": 259
+    }
+  },
+  {
+    "id": 34,
+    "Brand": "Puma",
+    "price": 55.99,
+    "description": "Men",
+    "category": "Shoes",
+    "image": "https://m.media-amazon.com/images/I/61oMecseVGL._AC_UL480_FMwebp_QL65_.jpg",
+    "rating": {
+      "rate": 4.7,
+      "count": 500
+    }
+  },
+  {
+    "id": 35,
+    "Brand": "Puma",
+    "price": 15.99,
+    "description": "Men",
+    "category": "Shoes",
+    "image": "https://m.media-amazon.com/images/I/619Nt1Ls7FL._AC_UL480_FMwebp_QL65_.jpg",
+    "rating": {
+      "rate": 2.1,
+      "count": 430
+    }
+  },
+  {
+    "id": 36,
+    "Brand": "Nike",
+    "price": 695,
+    "description": "Men",
+    "category": "Shoes",
+    "image": "https://sslimages.shoppersstop.com/sys-master/images/h7d/h7f/28675190292510/PU38340109_WHITE_alt1.jpg_2000Wx3000H",
+    "rating": {
+      "rate": 4.6,
+      "count": 400
+    }
+  },
+  {
+    "id": 37,
+    "Brand": "Nike",
+    "price": 168,
+    "description": "Women",
+    "image": "https://m.media-amazon.com/images/I/81oOLEnk3nL._AC_UL480_FMwebp_QL65_.jpg",
+    "category": "Shoes",
+    "rating": {
+      "rate": 3.9,
+      "count": 70
+    }
+  },
+  {
+    "id": 38,
+    "Brand": "Adidas",
+    "price": 9.99,
+    "description": "Women",
+    "category": "Shoes",
+    "image": "https://m.media-amazon.com/images/I/81reVVWtKcL._AC_UL480_FMwebp_QL65_.jpg",
+    "rating": {
+      "rate": 3,
+      "count": 400
+    }
+  },
+  {
+    "id": 39,
+    "Brand": "Adidas",
+    "price": 10.99,
+    "description": "Women",
+    "category": "Shoes",
+    "image": "https://m.media-amazon.com/images/I/71P-KIPHEwL._AC_UL480_FMwebp_QL65_.jpg",
+    "rating": {
+      "rate": 1.9,
+      "count": 100
+    }
+  },
+  {
+    "id": 40,
+    "Brand": "Coach",
+    "price": 64,
+    "description": "Women",
+    "category": "Shoes",
+    "image": "https://m.media-amazon.com/images/I/51OaZy0VS1L._AC_UL480_FMwebp_QL65_.jpg",
+    "rating": {
+      "rate": 3.3,
+      "count": 203
+    }
+  },
+  {
+    "id": 41,
+    "Brand": "Coach",
+    "price": 109,
+    "description": "Women",
+    "category": "Shoes",
+    "image": "https://m.media-amazon.com/images/I/71Oe-dHAxpL._AC_UL480_FMwebp_QL65_.jpg",
+    "rating": {
+      "rate": 2.9,
+      "count": 470
+    }
+  },
+  {
+    "id": 42,
+    "Brand": "Cuisinart",
+    "price": 109,
+    "description": "Kids",
+    "category": "Shoes",
+    "image": "https://sslimages.shoppersstop.com/sys-master/images/h7d/h7f/28675190292510/PU38340109_WHITE_alt1.jpg_2000Wx3000H",
+    "rating": {
+      "rate": 4.8,
+      "count": 319
+    }
+  },
+  {
+    "id": 43,
+    "Brand": "Michael Kors",
+    "price": 114,
+    "description": "Men",
+    "image": "https://sslimages.shoppersstop.com/sys-master/images/h7d/h7f/28675190292510/PU38340109_WHITE_alt1.jpg_2000Wx3000H",
+    "rating": {
+      "rate": 4.8,
+      "count": 400
+    }
+  },
+  {
+    "id": 44,
+    "Brand": "Cuisinart",
+    "price": 599,
+    "description": "Men",
+    "category": "Shoes",
+    "image": "https://sslimages.shoppersstop.com/sys-master/images/h05/hcd/28346841268254/WK526BLACK_BLACK.jpg_230Wx334H",
+    "rating": {
+      "rate": 2.9,
+      "count": 250
+    }
+  },
+  {
+    "id": 45,
+    "Brand": "Michael Kors",
+    "price": 999.99,
+    "description": "Men",
+    "category": "Shoes",
+    "image": "https://sslimages.shoppersstop.com/sys-master/images/h05/hcd/28346841268254/WK526BLACK_BLACK.jpg_230Wx334H",
+    "rating": {
+      "rate": 2.2,
+      "count": 140
+    }
+  },
+  {
+    "id": 46,
+    "Brand": "Bata",
+    "price": 56.99,
+    "description": "Men",
+    "category": "Shoes",
+    "image": "https://sslimages.shoppersstop.com/sys-master/images/h05/hcd/28346841268254/WK526BLACK_BLACK.jpg_230Wx334H",
+    "rating": {
+      "rate": 2.6,
+      "count": 235
+    }
+  },
+  {
+    "id": 47,
+    "Brand": "Bata",
+    "price": 29.95,
+    "description": "Men",
+    "category": "Shoes",
+    "image": "https://m.media-amazon.com/images/I/710+f7XX2FL._AC_UL480_QL65_.jpg",
+    "rating": {
+      "rate": 2.9,
+      "count": 340
+    }
+  },
+  {
+    "id": 48,
+    "Brand": "Woakers",
+    "price": 39.99,
+    "description": "Kids",
+    "category": "Shoes",
+    "image": "https://m.media-amazon.com/images/I/71xUvwXT4VL._AC_UL480_QL65_.jpg",
+    "rating": {
+      "rate": 3.8,
+      "count": 679
+    }
+  },
+  {
+    "id": 49,
+    "Brand": "Nike",
+    "price": 9.85,
+    "description": "Men",
+    "category": "Shoes",
+    "image": "https://m.media-amazon.com/images/I/31dmQn8ZsXL._AC_UF226,226_FMjpg_.jpg",
+    "rating": {
+      "rate": 4.7,
+      "count": 130
+    }
+  },
+  {
+    "id": 50,
+    "Brand": "Nike",
+    "price": 7.95,
+    "description": "Men",
+    "category": "Shoes",
+    "image": "https://sslimages.shoppersstop.com/sys-master/images/h05/hcd/28346841268254/WK526BLACK_BLACK.jpg_230Wx334H",
+    "rating": {
+      "rate": 4.5,
+      "count": 146
+    }
+  },
+  {
+    "id": 51,
+    "Brand": "Adidas",
+    "price": 12.99,
+    "description": "Kids",
+    "category": "Shoes",
+    "image": "https://m.media-amazon.com/images/I/31Qt+0GlBsL._AC_UF226,226_FMjpg_.jpg",
+    "rating": {
+      "rate": 3.6,
+      "count": 145
+    }
+  }
+]
