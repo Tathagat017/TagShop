@@ -832,7 +832,7 @@
             type="text"
             id="search"
             value=""
-            placeholder="search  by brands"
+            placeholder="brands/category search"
           />
           <button type="button" id="search-btn">
             <span class="material-icons"> search </span>
@@ -1347,13 +1347,26 @@
         });
       let input1 = f.target.value;
       console.log(input1);
+
+      let ser;
+
       let searced = fetchedData2.filter((el, index) => {
         if (el.Brand.toLowerCase().includes(input1.toLowerCase())) {
           return true;
         }
       });
 
-      displayProducts(searced);
+      if (searced != "") {
+        displayProducts(searced);
+      } else {
+        let searced2 = fetchedData2.filter((el, index) => {
+          if (el.category.toLowerCase().includes(input1.toLowerCase())) {
+            return true;
+          }
+        });
+
+        displayProducts(searced2);
+      }
     });
     // data is going to be fetched data
 
