@@ -131,18 +131,7 @@
       "count": 319
     }
   },
-  {
-    "id": 12,
-    "Brand": "Michael Kors",
-    "price": 114,
-    "description": "Men",
-    "category": "Clothing",
-    "image": "https://m.media-amazon.com/images/I/81MEk4n9BXL._AC_UL480_FMwebp_QL65_.jpg",
-    "rating": {
-      "rate": 4.8,
-      "count": 400
-    }
-  },
+
   {
     "id": 13,
     "Brand": "Wrangler",
@@ -503,17 +492,7 @@
       "count": 319
     }
   },
-  {
-    "id": 43,
-    "Brand": "Michael Kors",
-    "price": 114,
-    "description": "Men",
-    "image": "https://sslimages.shoppersstop.com/sys-master/images/h7d/h7f/28675190292510/PU38340109_WHITE_alt1.jpg_2000Wx3000H",
-    "rating": {
-      "rate": 4.8,
-      "count": 400
-    }
-  },
+
   {
     "id": 44,
     "Brand": "Cuisinart",
